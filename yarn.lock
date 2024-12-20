@@ -1555,6 +1555,26 @@
   resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.20.0.tgz#03554155b45d8b529adf635b2f6ad1165d70d8b4"
   integrity sha512-mUnk8rPJBI9loFDZ+YzPGdeniYK+FTmRD1TMCz7ev2SNIozyKKpnGgsxO34u6Z4z/t0ITuu7voi/AshfsGsgFg==
 
+"@rive-app/canvas-lite@2.25.2":
+  version "2.25.2"
+  resolved "https://registry.yarnpkg.com/@rive-app/canvas-lite/-/canvas-lite-2.25.2.tgz#11a26f74cb195b4ed2572d43a07fcaadb02704a1"
+  integrity sha512-QyBQk1eV5wwsvB8dHf1b3LdvRvrHMTOCUl1F3+ObAu6VfmxL9/Ttltmvbrp9A/k71Rt7Z8+ZbUq2qygGpgka+g==
+
+"@rive-app/canvas@2.25.2", "@rive-app/canvas@^2.25.2":
+  version "2.25.2"
+  resolved "https://registry.yarnpkg.com/@rive-app/canvas/-/canvas-2.25.2.tgz#32d18be62c1dbb94a0c31b7d2d208a6dad319c2f"
+  integrity sha512-6iCWnr1VG1su9e9ZUV+gA38+LEBfpYkzCkx4MvBe0FwkYaFeHybj2bLwEr8AYBlxfqWBI5mTEiA5NWWwZeyZiA==
+
+"@rive-app/webgl2@2.25.2":
+  version "2.25.2"
+  resolved "https://registry.yarnpkg.com/@rive-app/webgl2/-/webgl2-2.25.2.tgz#6f304555026d54426b8c54ae877ba02e0598ff3c"
+  integrity sha512-vL6Z2Kcg1jBPU7367ZYBWAt77ZOIRuzTEM7YzcbOOVpfWf627ukQTeIntYdUWU3eOUvM2k0+3CoT/xLgpW6WPw==
+
+"@rive-app/webgl@2.25.2":
+  version "2.25.2"
+  resolved "https://registry.yarnpkg.com/@rive-app/webgl/-/webgl-2.25.2.tgz#1f7ea678858b66abe10ab5beb2a071cd6cdb8f21"
+  integrity sha512-wDPT+6J04EBMF5ltjoVHO93bDAVJ4P6TNM8oxUaZIl/Tap5fTUYsgraHBmo807R23wTwrB6Zb72ZLdfcxj17yw==
+
 "@rollup/plugin-babel@^5.2.0":
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-babel/-/plugin-babel-5.3.1.tgz#04bc0608f4aa4b2e4b1aebf284344d0f68fda283"
@@ -4344,6 +4364,16 @@ reusify@^1.0.4:
   resolved "https://registry.yarnpkg.com/reusify/-/reusify-1.0.4.tgz#90da382b1e126efc02146e90845a88db12925d76"
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
 
+rive-react@^4.17.4:
+  version "4.17.4"
+  resolved "https://registry.yarnpkg.com/rive-react/-/rive-react-4.17.4.tgz#27c0da0190b8029386249958131b993fe2d16e35"
+  integrity sha512-PHEzzObeaCDG46QLMct/zUgRpIqKzDDSIJ+GBTjWBde7pCE6KKhxfAA1MsdnW5IVIZwAElldW1uXJPGR9wv/ng==
+  dependencies:
+    "@rive-app/canvas" "2.25.2"
+    "@rive-app/canvas-lite" "2.25.2"
+    "@rive-app/webgl" "2.25.2"
+    "@rive-app/webgl2" "2.25.2"
+
 rollup@^2.43.1:
   version "2.79.2"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.79.2.tgz#f150e4a5db4b121a21a747d762f701e5e9f49090"
@@ -4624,16 +4654,8 @@ string-convert@^0.2.0:
   resolved "https://registry.yarnpkg.com/string-convert/-/string-convert-0.2.1.tgz#6982cc3049fbb4cd85f8b24568b9d9bf39eeff97"
   integrity sha512-u/1tdPl4yQnPBjnVrmdLo9gtuLvELKsAoRapekWggdiQNvvvum+jYF329d84NAa660KQw7pB2n36KrIKVoXa3A==
 
-"string-width-cjs@npm:string-width@^4.2.0":
-  version "4.2.3"
-  resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
-  integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
-  dependencies:
-    emoji-regex "^8.0.0"
-    is-fullwidth-code-point "^3.0.0"
-    strip-ansi "^6.0.1"
-
-string-width@^4.1.0:
+"string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -4713,14 +4735,8 @@ stringify-object@^3.3.0:
     is-obj "^1.0.1"
     is-regexp "^1.0.0"
 
-"strip-ansi-cjs@npm:strip-ansi@^6.0.1":
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
-  integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
-  dependencies:
-    ansi-regex "^5.0.1"
-
-strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+"strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+  name strip-ansi-cjs
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
