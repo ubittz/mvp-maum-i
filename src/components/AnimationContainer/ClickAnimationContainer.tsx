@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRive, UseRiveParameters, Rive } from 'rive-react';
 
-interface ClickAnimationViewProps {
+interface ClickAnimationContainerProps {
   params: UseRiveParameters;
   maxTouchCount: number;
   size?: {
@@ -10,7 +10,7 @@ interface ClickAnimationViewProps {
   };
 }
 
-const ClickAnimationView: React.FC<ClickAnimationViewProps> = ({ params, maxTouchCount, size = { width: 600, height: 500 } }) => {
+const ClickAnimationContainer: React.FC<ClickAnimationContainerProps> = ({ params, maxTouchCount, size = { width: 600, height: 500 } }) => {
   const [isRunning, setIsRunning] = useState(false); // 애니메이션 상태 관리
   const [touchCount, setTouchCount] = useState(0);
 
@@ -52,4 +52,4 @@ const ClickAnimationView: React.FC<ClickAnimationViewProps> = ({ params, maxTouc
   );
 };
 
-export default ClickAnimationView;
+export default ClickAnimationContainer;
