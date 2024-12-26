@@ -4,7 +4,7 @@ import { BUTTON_SIZE, BUTTON_THEME } from '@@components/Button/constants';
 import { FLEX_DIRECTION } from '@@components/Flex/constants';
 import { TYPOGRAPHY_THEME } from '@@components/Typography/constants';
 import { COLORS } from '@@constants/colors';
-
+import { TEXTFIELD_THEME } from '@@components/InputFormGroup/constants';
 export const theme: DefaultTheme = {
   flex: {
     direction: {
@@ -14,10 +14,10 @@ export const theme: DefaultTheme = {
   },
   button: {
     size: {
-      [BUTTON_SIZE.XLARGE]: 'height: 48px;',
-      [BUTTON_SIZE.LARGE]: 'height: 40px;',
-      [BUTTON_SIZE.MEDIUM]: 'height: 32px;',
-      [BUTTON_SIZE.SMALL]: 'height: 28px;',
+      [BUTTON_SIZE.XLARGE]: 'height: 48px; font-size: 14px;',
+      [BUTTON_SIZE.LARGE]: 'height: 40px; padding: 0 16px; font-size: 14px;',
+      [BUTTON_SIZE.MEDIUM]: 'height: 32px; padding: 0 16px; font-size: 14px;',
+      [BUTTON_SIZE.SMALL]: 'height: 28px; padding: 0 12px; font-size: 12px;',
     },
     theme: {
       [BUTTON_THEME.SOLID]: `background: ${COLORS.GRAY_SCALE_800}; border: none; color: ${COLORS.GRAY_SCALE_000}`,
@@ -25,6 +25,13 @@ export const theme: DefaultTheme = {
       [BUTTON_THEME.SOFT]: `background: ${COLORS.GRAY_SCALE_000}; border: none; color: ${COLORS.GRAY_SCALE_800}`,
       [BUTTON_THEME.OUTLINE]: `background: ${COLORS.GRAY_SCALE_000}; border: 1px solid ${COLORS.GRAY_SCALE_050}; color: ${COLORS.GRAY_SCALE_700}`,
       [BUTTON_THEME.INACTIVE]: `background: ${COLORS.GRAY_SCALE_100}; border: none; color: ${COLORS.GRAY_SCALE_200}`,
+    },
+  },
+  textField: {
+    theme: {
+      [TEXTFIELD_THEME.DEFAULT]: `border: 1px solid ${COLORS.MAIN_055}; &:focus { border-color: ${COLORS.MUSTARD_500}; }`,
+      [TEXTFIELD_THEME.SOFT]: `border: none; background: ${COLORS.MAIN_055};`,
+      [TEXTFIELD_THEME.GHOST]: `border: 1px solid ${COLORS.MAIN_060}; background: transparent;`,
     },
   },
   typography: {
@@ -44,6 +51,8 @@ export const theme: DefaultTheme = {
   color: {
     defualtFontColor: COLORS.GRAY_SCALE_900,
     main_050: COLORS.GRAY_SCALE_050,
+    main_055: COLORS.MAIN_055,
+    main_060: COLORS.MAIN_060,
     main_400: COLORS.GRAY_SCALE_800,
     main_700: COLORS.GRAY_SCALE_700,
   },

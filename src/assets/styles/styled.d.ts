@@ -16,6 +16,8 @@ declare module 'styled-components' {
     color: {
       defualtFontColor: string;
       main_050: string;
+      main_055: string;
+      main_060: string;
       main_400: string;
       main_700: string;
     };
