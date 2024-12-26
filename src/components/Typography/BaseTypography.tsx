@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { TypographyProps, TypographyTheme } from '@@components/Typography/types';
 
 const StyledBaseTypography = styled.p<{ $theme: TypographyTheme; $color?: string }>`
+  letter-spacing: -0.04em;
   ${({ theme, $theme }) => theme.typography[$theme]}
   color: ${({ theme, $color }) => $color ?? theme.color.defualtFontColor};
 `;
