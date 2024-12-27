@@ -12,6 +12,9 @@ declare module 'styled-components' {
       size: Record<ButtonSize, string>;
       theme: Record<ButtonTheme, string>;
     };
+    textField: {
+      theme: Record<TextFieldTheme, string>;
+    };
     typography: Record<TypographyTheme, string>;
     color: {
       defualtFontColor: string;

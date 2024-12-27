@@ -2,9 +2,10 @@ import { DefaultTheme } from 'styled-components';
 
 import { BUTTON_SIZE, BUTTON_THEME } from '@@components/Button/constants';
 import { FLEX_DIRECTION } from '@@components/Flex/constants';
+import { TEXTFIELD_THEME } from '@@components/InputFormGroup/constants';
 import { TYPOGRAPHY_THEME } from '@@components/Typography/constants';
 import { COLORS } from '@@constants/colors';
-import { TEXTFIELD_THEME } from '@@components/InputFormGroup/constants';
+
 export const theme: DefaultTheme = {
   flex: {
     direction: {
