@@ -4,6 +4,7 @@ import animation1 from '@@assets/images/animation1.riv';
 import clickAnimation1 from '@@assets/images/clickAnimation1.riv';
 import AnimationContainer from '@@components/AnimationContainer';
 import ClickAnimationContainer from '@@components/AnimationContainer/ClickAnimationContainer';
+import Footer from '@@components/Footer';
 import FullScreen from '@@components/FullScreen';
 
 const StyledHome = styled(FullScreen)`
@@ -24,6 +25,7 @@ function Home() {
         maxTouchCount={4}
       />
       <AnimationContainer params={{ src: animation1, autoplay: true }} />
+      <Footer />
     </StyledHome>
   );
 }
