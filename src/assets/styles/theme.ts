@@ -30,9 +30,9 @@ export const theme: DefaultTheme = {
   },
   textField: {
     theme: {
-      [TEXTFIELD_THEME.DEFAULT]: `border: 1px solid ${COLORS.MAIN_055}; &:focus { border-color: ${COLORS.MUSTARD_500}; }`,
-      [TEXTFIELD_THEME.SOFT]: `border: none; background: ${COLORS.MAIN_055};`,
-      [TEXTFIELD_THEME.GHOST]: `border: 1px solid ${COLORS.MAIN_060}; background: transparent;`,
+      [TEXTFIELD_THEME.DEFAULT]: `color: ${COLORS.GRAY_SCALE_900}; border: 1px solid ${COLORS.MAIN_055}; &:focus { border-color: ${COLORS.MUSTARD_500}; }`,
+      [TEXTFIELD_THEME.SOFT]: `color: ${COLORS.GRAY_SCALE_900}; border: none; background: ${COLORS.MAIN_055};`,
+      [TEXTFIELD_THEME.GHOST]: `color: ${COLORS.GRAY_SCALE_900}; border: 1px solid ${COLORS.MAIN_060}; background: transparent;`,
     },
   },
   typography: {

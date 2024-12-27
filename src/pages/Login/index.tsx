@@ -37,7 +37,8 @@ function Login() {
     navigate(pathGenerator(PAGES.AUTH) + '/register');
   };
   const handleFindIdPw = () => {
-    navigate(pathGenerator(PAGES.AUTH) + '/find');
+    // 아이디 찾기 페이지 디자인 x
+    navigate(pathGenerator(PAGES.AUTH) + '/register');
   };
 
   return (

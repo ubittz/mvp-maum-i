@@ -4,7 +4,6 @@ import Error from '@@pages/Error';
 import Home from '@@pages/Home';
 import Lecture from '@@pages/Lecture';
 import Login from '@@pages/Login';
-import FindIdPw from '@@pages/Login/FindIdPw';
 import Register from '@@pages/Login/Register';
 import MyPage from '@@pages/MyPage';
 import Purchase from '@@pages/Purchase';
@@ -17,7 +16,6 @@ function Router() {
       <Route path='/' element={<Navigate to={ROUTE_PREFIX} />} />
       <Route path={pathGenerator(PAGES.AUTH)} element={<Login />} />
       <Route path={pathGenerator(PAGES.AUTH) + '/register'} element={<Register />} />
-      <Route path={pathGenerator(PAGES.AUTH) + '/find'} element={<FindIdPw />} />
 
       <Route path={pathGenerator(PAGES.HOME)} element={<Home />} />
       <Route path={pathGenerator(PAGES.LECTURE)} element={<Lecture />} />

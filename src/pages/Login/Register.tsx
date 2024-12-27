@@ -87,7 +87,7 @@ function Register() {
 
   const handleBack = () => {
     if (step === 1) {
-      navigate(-1);
+      navigate(pathGenerator(PAGES.AUTH));
     } else {
       setStep(1);
     }
