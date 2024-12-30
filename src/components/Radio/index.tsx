@@ -31,8 +31,8 @@ const StyledRadio = styled.label`
 
 const Radio: React.FC<RadioProps> = ({ children, onSelect, checked, ...props }) => {
   return (
-    <StyledRadio onClick={onSelect}>
-      <input type='radio' checked={checked} {...props} />
+    <StyledRadio>
+      <input type='radio' onChange={onSelect} checked={checked} {...props} />
       {checked ? <RadioCheckedIcon className='radio__icon' /> : <RadioIcon className='radio__icon' />}
       {children}
     </StyledRadio>

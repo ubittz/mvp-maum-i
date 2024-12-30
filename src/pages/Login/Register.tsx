@@ -77,7 +77,7 @@ const StyledRegister = styled.div`
         align-items: center;
 
         .text {
-          margin-left: 4px;
+          margin-left: px;
           color: ${COLORS.GRAY_SCALE_800};
         }
 
