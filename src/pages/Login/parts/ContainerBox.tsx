@@ -49,9 +49,9 @@ function ContainerBox({ onBack, title, children }: ContainerBoxProps) {
     <StyledContainerBox>
       <Flex.Horizontal className='header'>
         {onBack && <img src={leftChevronIcon} alt='back' className='left_icon' onClick={onBack} />}
-        <Typography.Title2 className='title_text' style={{ marginLeft: onBack ? '-24px' : '0' }}>
+        <Typography.Title4 className='title_text' style={{ marginLeft: onBack ? '-24px' : '0' }}>
           {title}
-        </Typography.Title2>
+        </Typography.Title4>
       </Flex.Horizontal>
       {children}
     </StyledContainerBox>

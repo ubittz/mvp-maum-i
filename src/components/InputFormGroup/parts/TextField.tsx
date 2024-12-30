@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
+import { COLORS } from '@@constants/colors';
+
 import { TextFieldProps } from '../types';
 import { TextFieldTheme } from '../types';
-import { COLORS } from '@@constants/colors';
 
 const StyledTextField = styled.input<{ $theme: TextFieldTheme }>`
   height: 48px;
@@ -12,6 +13,7 @@ const StyledTextField = styled.input<{ $theme: TextFieldTheme }>`
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
+  letter-spacing: -0.04em;
 
   ${({ theme, $theme }) => theme.textField.theme[$theme]}
 

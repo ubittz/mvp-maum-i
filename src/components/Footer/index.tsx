@@ -37,26 +37,26 @@ function Footer() {
         <Typography.Body1>공감아이</Typography.Body1>
       </Flex.Horizontal>
       <Flex.Horizontal className='right_container'>
-        <Typography.Caption>
+        <Typography.Caption2>
           사업자정보 (주)공감우리
           <br />
           대표자명 남재현
-        </Typography.Caption>
-        <Typography.Caption>
+        </Typography.Caption2>
+        <Typography.Caption2>
           사업자등록번호 753-86-01432
           <br />
           주소 서울특별시 금천구 벚꽃로 286, 507-259호(가산동, 삼성리더스타워)
-        </Typography.Caption>
-        <Typography.Caption>
+        </Typography.Caption2>
+        <Typography.Caption2>
           (주)공감우리 고객센터
           <br />
           운영시간 : 10:00 ~ 17:00
-        </Typography.Caption>
-        <Typography.Caption>
+        </Typography.Caption2>
+        <Typography.Caption2>
           이메일 : uri@thegonggam.co.kr
           <br />
           연락처 : 1800 - 5036
-        </Typography.Caption>
+        </Typography.Caption2>
       </Flex.Horizontal>
     </StyledFooter>
   );

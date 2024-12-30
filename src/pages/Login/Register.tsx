@@ -57,7 +57,7 @@ const StyledRegister = styled.div`
     }
 
     .input_form_group_step_2 {
-      margin-top: 44px;
+      margin-top: 24px;
 
       .input_form_group__wrap {
         gap: 11px;
@@ -69,6 +69,21 @@ const StyledRegister = styled.div`
 
         &:last-child {
           margin-bottom: 0px;
+        }
+      }
+
+      .input_form_group__wrap_checkbox {
+        margin: 12px 0 24px 0;
+        align-items: center;
+
+        .text {
+          margin-left: 4px;
+          color: ${COLORS.GRAY_SCALE_800};
+        }
+
+        .text_button {
+          margin-left: 28px;
+          color: ${COLORS.GRAY_SCALE_600};
         }
       }
     }
