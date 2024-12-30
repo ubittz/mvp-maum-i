@@ -1,4 +1,5 @@
 export const COLORS = {
+  MAIN_000: '#FFF9C7',
   MAIN_055: '#F2EDBD',
   MAIN_060: '#A9A684',
 

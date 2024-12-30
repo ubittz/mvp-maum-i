@@ -1,6 +1,7 @@
 export const TYPOGRAPHY_THEME = {
   TITLE_1: 'Title1',
   TITLE_2: 'Title2',
+  TITLE_3: 'Title3',
   SUBTITLE_1: 'Subtitle1',
   SUBTITLE_2: 'Subtitle2',
   SUBTITLE_3: 'Subtitle3',

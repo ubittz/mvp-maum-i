@@ -9,8 +9,11 @@ import { PAGES } from '@@router/constants';
 import { pathGenerator } from '@@router/utils';
 
 const StyledGNBBar = styled(Flex.Horizontal)`
+  display: flex;
   height: 72px;
-  border-top: 1px solid ${COLORS.GRAY_SCALE_050};
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid ${COLORS.MAIN_055};
 
   .navigation_item {
     flex: 1;

@@ -36,9 +36,10 @@ export const theme: DefaultTheme = {
     },
   },
   typography: {
-    [TYPOGRAPHY_THEME.TITLE_1]: 'font-size: 24px; font-weight: 800;',
+    [TYPOGRAPHY_THEME.TITLE_1]: 'font-size: 36px; font-weight: 800; line-height: 54px;',
     [TYPOGRAPHY_THEME.TITLE_2]: 'font-size: 20px; font-weight: 800;',
-    [TYPOGRAPHY_THEME.SUBTITLE_1]: 'font-size: 18px; font-weight: 800;',
+    [TYPOGRAPHY_THEME.TITLE_3]: 'font-size: 24px; font-weight: 800; line-height: 27px;',
+    [TYPOGRAPHY_THEME.SUBTITLE_1]: 'font-size: 20px; font-weight: 800; line-height: 30px;',
     [TYPOGRAPHY_THEME.SUBTITLE_2]: 'font-size: 16px; font-weight: 800;',
     [TYPOGRAPHY_THEME.SUBTITLE_3]: 'font-size: 14px; font-weight: 700;',
     [TYPOGRAPHY_THEME.BODY_1]: 'font-size: 20px; font-weight: 400;',

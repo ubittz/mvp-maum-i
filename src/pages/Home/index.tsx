@@ -1,15 +1,22 @@
+import { useState } from 'react';
+
 import styled from 'styled-components';
 
-import animation1 from '@@assets/images/animation1.riv';
-import clickAnimation1 from '@@assets/images/clickAnimation1.riv';
-import AnimationContainer from '@@components/AnimationContainer';
-import ClickAnimationContainer from '@@components/AnimationContainer/ClickAnimationContainer';
-import Footer from '@@components/Footer';
+import Flex from '@@components/Flex';
 import FullScreen from '@@components/FullScreen';
+import BannerContainer from '@@pages/Home/parts/BannerContainer';
+import CheckPurchaseContainer from '@@pages/Home/parts/CheckPurchaseContainer';
+import StudyStatusContainer from '@@pages/Home/parts/StudyStatusContainer';
+import VideoPlayerModal from '@@pages/Home/parts/VideoPlayerModal';
 
 const StyledHome = styled(FullScreen)`
-  .body {
-    overflow-y: hidden;
+  .content {
+    gap: 12px;
+    margin: 36px 32px;
+
+    .right_container {
+      gap: 12px;
+    }
   }
 
   & > div {
@@ -18,14 +25,22 @@ const StyledHome = styled(FullScreen)`
 `;
 
 function Home() {
+  const [isShowVideoModal, setIsShowVideoModal] = useState(false);
+
+  const handleVideoModal = () => {
+    setIsShowVideoModal(!isShowVideoModal);
+  };
+
   return (
-    <StyledHome gnb>
-      <ClickAnimationContainer
-        params={{ src: clickAnimation1, autoplay: true, animations: ['Timeline 1', 'Timeline 2', 'Timeline 3', 'Timeline 4'] }}
-        maxTouchCount={4}
-      />
-      <AnimationContainer params={{ src: animation1, autoplay: true }} />
-      <Footer />
+    <StyledHome gnb footer>
+      <Flex.Horizontal className='content'>
+        <StudyStatusContainer />
+        <Flex.Vertical className='right_container'>
+          <CheckPurchaseContainer onClick={handleVideoModal} />
+          <BannerContainer />
+        </Flex.Vertical>
+      </Flex.Horizontal>
+      {isShowVideoModal && <VideoPlayerModal onClose={handleVideoModal} onPlay={handleVideoModal} onSubscribeProduct={handleVideoModal} />}
     </StyledHome>
   );
 }

@@ -1,19 +1,24 @@
 import styled from 'styled-components';
 
+import { COLORS } from '@@constants/colors';
+
 const StyledSliderNavigation = styled.div`
+  position: absolute;
   display: flex;
   justify-content: center;
-  gap: 4px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 8px;
 
   .slider_dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 3px;
-
-    background: #eee;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background: ${COLORS.GRAY_SCALE_200};
 
     &.slider_dot-active {
-      background: #999;
+      background: ${COLORS.GRAY_SCALE_400};
     }
   }
 `;

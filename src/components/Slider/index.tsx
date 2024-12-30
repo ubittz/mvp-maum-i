@@ -11,14 +11,14 @@ import { SliderProps } from '@@components/Slider/types';
 const StyledSlider = styled.div<{ $currentIndex: number; $size?: number }>`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  position: relative;
+
   .slider__slick_wrap {
     ${({ $size }) => $size && `width: ${$size}px;`}
   }
 `;
 
 const StyledSlick = styled(Slick)<{ gap: number }>`
-  /* Slider Item에게 Gap을 주기 위한 속성들 */
   .slick-list {
     margin: 0 -${({ gap }) => gap / 2}px;
     .slick-slide > div {
@@ -29,7 +29,6 @@ const StyledSlick = styled(Slick)<{ gap: number }>`
 
 function Slider({ items, gap = 0, itemSize, sliderProps, ...props }: SliderProps) {
   const [index, setIndex] = useState<number>(0);
-
   const dots = sliderProps?.dots ?? true;
 
   return (
