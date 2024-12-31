@@ -22,17 +22,17 @@ export const theme: DefaultTheme = {
     },
     theme: {
       [BUTTON_THEME.SOLID]: `background: ${COLORS.GRAY_SCALE_800}; border: none; color: ${COLORS.GRAY_SCALE_000}`,
-      [BUTTON_THEME.GHOST]: `background: ${COLORS.GRAY_SCALE_000}; border: 1px solid ${COLORS.GRAY_SCALE_800}; color: ${COLORS.GRAY_SCALE_800}`,
-      [BUTTON_THEME.SOFT]: `background: ${COLORS.GRAY_SCALE_000}; border: none; color: ${COLORS.GRAY_SCALE_800}`,
-      [BUTTON_THEME.OUTLINE]: `background: ${COLORS.GRAY_SCALE_000}; border: 1px solid ${COLORS.GRAY_SCALE_050}; color: ${COLORS.GRAY_SCALE_700}`,
+      [BUTTON_THEME.GHOST]: `border: 1px solid ${COLORS.GRAY_SCALE_800}; color: ${COLORS.GRAY_SCALE_800}`,
+      [BUTTON_THEME.SOFT]: `background: ${COLORS.MAIN_200}; border: none; color: ${COLORS.GRAY_SCALE_800}`,
+      [BUTTON_THEME.OUTLINE]: `border: 1px solid ${COLORS.MAIN_200}; color: ${COLORS.GRAY_SCALE_700}`,
       [BUTTON_THEME.INACTIVE]: `background: ${COLORS.GRAY_SCALE_100}; border: none; color: ${COLORS.GRAY_SCALE_200}`,
     },
   },
   textField: {
     theme: {
-      [TEXTFIELD_THEME.DEFAULT]: `color: ${COLORS.GRAY_SCALE_900}; border: 1px solid ${COLORS.MAIN_055}; &:focus { border-color: ${COLORS.MUSTARD_500}; }`,
-      [TEXTFIELD_THEME.SOFT]: `color: ${COLORS.GRAY_SCALE_900}; border: none; background: ${COLORS.MAIN_055};`,
-      [TEXTFIELD_THEME.GHOST]: `color: ${COLORS.GRAY_SCALE_900}; border: 1px solid ${COLORS.MAIN_060}; background: transparent;`,
+      [TEXTFIELD_THEME.DEFAULT]: `color: ${COLORS.GRAY_SCALE_900}; border: 1px solid ${COLORS.MAIN_300}; &:focus { border-color: ${COLORS.MUSTARD_500}; }`,
+      [TEXTFIELD_THEME.SOFT]: `color: ${COLORS.GRAY_SCALE_900}; border: none; background: ${COLORS.MAIN_300};`,
+      [TEXTFIELD_THEME.GHOST]: `color: ${COLORS.GRAY_SCALE_900}; border: 1px solid ${COLORS.MAIN_500}; background: transparent;`,
     },
   },
   typography: {
@@ -55,10 +55,9 @@ export const theme: DefaultTheme = {
   },
   color: {
     defualtFontColor: COLORS.GRAY_SCALE_900,
-    main_050: COLORS.GRAY_SCALE_050,
-    main_055: COLORS.MAIN_055,
-    main_060: COLORS.MAIN_060,
-    main_400: COLORS.GRAY_SCALE_800,
-    main_700: COLORS.GRAY_SCALE_700,
+    main_100: COLORS.MAIN_100,
+    main_200: COLORS.MAIN_200,
+    main_300: COLORS.MAIN_300,
+    main_500: COLORS.MAIN_500,
   },
 };

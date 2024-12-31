@@ -1,8 +1,8 @@
 export const COLORS = {
-  MAIN_000: '#FFF9C7',
-  MAIN_055: '#F2EDBD',
-  MAIN_060: '#A9A684',
+  MAIN_100: '#FFF9C7',
   MAIN_200: '#F2EDBD',
+  MAIN_300: '#E8E4B5',
+  MAIN_500: '#A9A684',
 
   MUSTARD_500: '#FFB200',
 

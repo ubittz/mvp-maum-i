@@ -8,7 +8,7 @@ import { COLORS } from '@@constants/colors';
 
 const StyledFullScreen = styled(Flex.Vertical)`
   height: 100vh;
-  background-color: ${COLORS.MAIN_000};
+  background-color: ${COLORS.MAIN_100};
 
   .body {
     flex: 1;

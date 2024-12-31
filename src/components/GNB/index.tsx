@@ -13,7 +13,7 @@ const StyledGNBBar = styled(Flex.Horizontal)`
   height: 72px;
   width: 100%;
   justify-content: space-between;
-  border-bottom: 1px solid ${COLORS.MAIN_055};
+  border-bottom: 1px solid ${COLORS.MAIN_200};
 
   .navigation_item {
     flex: 1;

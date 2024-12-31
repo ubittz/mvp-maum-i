@@ -7,6 +7,7 @@ import Login from '@@pages/Login';
 import Register from '@@pages/Login/Register';
 import MyPage from '@@pages/MyPage';
 import Purchase from '@@pages/Purchase';
+import PurchaseSuccess from '@@pages/Purchase/Success';
 import { PAGES, ROUTE_PREFIX } from '@@router/constants';
 import { pathGenerator } from '@@router/utils';
 
@@ -22,6 +23,7 @@ function Router() {
       <Route path={pathGenerator(PAGES.MY_PAGE)} element={<MyPage />} />
 
       <Route path={pathGenerator(PAGES.PURCHASE)} element={<Purchase />} />
+      <Route path={pathGenerator(PAGES.PURCHASE) + '/success'} element={<PurchaseSuccess />} />
       <Route path='*' element={<Error />} />
     </Routes>
   );

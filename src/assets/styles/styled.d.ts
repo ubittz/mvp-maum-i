@@ -18,11 +18,10 @@ declare module 'styled-components' {
     typography: Record<TypographyTheme, string>;
     color: {
       defualtFontColor: string;
-      main_050: string;
-      main_055: string;
-      main_060: string;
-      main_400: string;
-      main_700: string;
+      main_100: string;
+      main_200: string;
+      main_300: string;
+      main_500: string;
     };
   }
 }

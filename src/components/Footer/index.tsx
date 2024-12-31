@@ -7,7 +7,7 @@ import { COLORS } from '@@constants/colors';
 const StyledFooter = styled(Flex.Horizontal)`
   width: 100%;
   height: 72px;
-  background-color: ${COLORS.MAIN_055};
+  background-color: ${COLORS.MAIN_200};
   padding: 25px 37px;
   justify-content: space-between;
 
@@ -24,7 +24,7 @@ const StyledFooter = styled(Flex.Horizontal)`
     gap: 40px;
 
     & > * {
-      color: ${COLORS.MAIN_060};
+      color: ${COLORS.MAIN_500};
     }
   }
 `;

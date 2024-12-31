@@ -4,7 +4,6 @@ import { arrowLeftIcon } from '@@assets/icons';
 import Flex from '@@components/Flex';
 import Typography from '@@components/Typography';
 import { COLORS } from '@@constants/colors';
-import PurchaseContent from '@@pages/Purchase/parts/PurchaseContent';
 
 const StyledPurchaseContainer = styled(Flex.Vertical)`
   width: 100%;
@@ -31,16 +30,17 @@ const ContainerHeader = styled(Flex.Horizontal)`
 interface PurchaseContainerProps {
   title: string;
   onBack?: () => void;
+  children: React.ReactNode;
 }
 
-function PurchaseContainer({ title, onBack }: PurchaseContainerProps) {
+function PurchaseContainer({ title, onBack, children }: PurchaseContainerProps) {
   return (
     <StyledPurchaseContainer className='purchase_container'>
       <ContainerHeader className='container_header'>
-        <img src={arrowLeftIcon} alt='arrow_left' onClick={onBack} className='button_left' />
+        {onBack && <img src={arrowLeftIcon} alt='arrow_left' onClick={onBack} className='button_left' />}
         <Typography.Subtitle2>{title}</Typography.Subtitle2>
       </ContainerHeader>
-      <PurchaseContent />
+      {children}
     </StyledPurchaseContainer>
   );
 }

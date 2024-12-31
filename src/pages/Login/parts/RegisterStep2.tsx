@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import Button from '@@components/Button';
-import { CheckBox } from '@@components/CheckBox';
+import CheckBox from '@@components/CheckBox';
 import Flex from '@@components/Flex';
 import InputFormGroup from '@@components/InputFormGroup';
 import Typography from '@@components/Typography';
@@ -36,7 +36,7 @@ function RegisterStep2({ onNext }: RegisterStep2Props) {
           <InputFormGroup inputProps={{ placeholder: '이메일을 입력해 주세요.' }} />
         </Flex.Vertical>
         <Flex.Horizontal className='input_form_group__wrap_checkbox'>
-          <CheckBox isChecked={isChecked} onClick={handleAgree} />
+          <CheckBox isChecked={isChecked} onChange={handleAgree} />
           <Typography.Body3 className='text'>[필수] 개인정보처리방침에 동의합니다.</Typography.Body3>
           <Typography.Body3 className='text_button'>약관보기</Typography.Body3>
         </Flex.Horizontal>
