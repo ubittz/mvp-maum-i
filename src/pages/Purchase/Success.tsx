@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+import { arrowRightIcon } from '@@assets/icons';
 import Button from '@@components/Button';
 import Flex from '@@components/Flex';
 import FullScreen from '@@components/FullScreen';
@@ -38,7 +39,7 @@ function Success() {
           <DoneIcon className='done__icon' />
           <Typography.Title3 className='done__text'>결제가 완료되었습니다.</Typography.Title3>
           <Flex.Vertical className='button__container'>
-            <Button.Xlarge>홈으로 돌아가기</Button.Xlarge>
+            <Button.Xlarge icon={arrowRightIcon}>감정 강의 보러가기</Button.Xlarge>
             <Button.Xlarge theme='soft'>결제 내역</Button.Xlarge>
           </Flex.Vertical>
         </StyledPurchaseSuccess>
