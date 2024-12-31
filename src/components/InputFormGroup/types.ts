@@ -1,8 +1,9 @@
 import { ButtonHTMLAttributes, InputHTMLAttributes } from 'react';
 
 import { FormGroupProps } from '@@components/FormGroup/types';
-import { TEXTFIELD_THEME } from './constants';
 import { asType } from '@@types/common';
+
+import { TEXTFIELD_THEME } from './constants';
 
 export type TextFieldTheme = asType<typeof TEXTFIELD_THEME>;
 

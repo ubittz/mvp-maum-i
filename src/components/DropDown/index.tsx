@@ -3,6 +3,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 
 import { downChevronIcon } from '@@assets/icons';
+import { DropDownOption } from '@@components/DropDown/types';
 import Flex from '@@components/Flex';
 import Typography from '@@components/Typography';
 import { COLORS } from '@@constants/colors';
@@ -42,7 +43,7 @@ const StyledDropDown = styled(Flex.Vertical)<{ isOpen: boolean }>`
 `;
 
 interface DropDownProps {
-  options: string[];
+  options: DropDownOption[];
   placeholder: string;
   onSelect: (option: string) => void;
 }
@@ -67,8 +68,8 @@ const DropDown: React.FC<DropDownProps> = ({ options, placeholder, onSelect }) =
       </Flex.Horizontal>
       <Flex.Vertical className='dropdown-content'>
         {options.map((option) => (
-          <div key={option} className='dropdown-item' onClick={() => handleSelect(option)}>
-            <Typography.Body3>{option}</Typography.Body3>
+          <div key={option.value} className='dropdown-item' onClick={() => handleSelect(option.value)}>
+            <Typography.Body3>{option.label}</Typography.Body3>
           </div>
         ))}
       </Flex.Vertical>
