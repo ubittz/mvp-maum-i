@@ -10,7 +10,7 @@ import { pathGenerator } from '@@router/utils';
 
 const StyledGNBBar = styled(Flex.Horizontal)`
   display: flex;
-  height: 72px;
+  height: 82px;
   width: 100%;
   justify-content: space-between;
   border-bottom: 1px solid ${COLORS.MAIN_200};

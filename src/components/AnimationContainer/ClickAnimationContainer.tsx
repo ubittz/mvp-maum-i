@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import { useRive, UseRiveParameters, Rive } from 'rive-react';
 
 interface ClickAnimationContainerProps {

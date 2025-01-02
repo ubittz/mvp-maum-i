@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 import FullScreen from '@@components/FullScreen';
+import GuideVideoContainer from '@@pages/Lecture/parts/GuideVideoContainer';
+import LectureContainer from '@@pages/Lecture/parts/LectureContainer';
 
 const StyledLecture = styled(FullScreen)`
-  .body {
-    overflow-y: hidden;
-  }
+  overflow-y: hidden;
+  overflow-x: hidden;
 
   & > div {
     flex: 0 0 auto;
@@ -15,7 +16,9 @@ const StyledLecture = styled(FullScreen)`
 function Lecture() {
   return (
     <StyledLecture gnb>
-      <div>Lecture</div>
+      <LectureContainer title='사용 가이드 영상'>
+        <GuideVideoContainer />
+      </LectureContainer>
     </StyledLecture>
   );
 }

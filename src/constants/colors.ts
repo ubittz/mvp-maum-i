@@ -5,6 +5,7 @@ export const COLORS = {
   MAIN_500: '#A9A684',
 
   MUSTARD_500: '#FFB200',
+  MUSTARD_700: '#996B00',
 
   GRAY_SCALE_000: '#FFFFFF',
   GRAY_SCALE_050: '#F1F2F3',

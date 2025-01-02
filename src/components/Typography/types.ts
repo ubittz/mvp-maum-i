@@ -7,6 +7,7 @@ import { asType } from '@@types/common';
 
 export interface TypographyProps extends HTMLAttributes<HTMLParagraphElement> {
   as?: SupportedHTMLElements;
+  fontWeight?: number;
   color?: string;
 }
 

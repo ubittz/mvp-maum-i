@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import Error from '@@pages/Error';
 import Home from '@@pages/Home';
 import Lecture from '@@pages/Lecture';
+import LectureMap from '@@pages/Lecture/LectureMap';
 import Login from '@@pages/Login';
 import Register from '@@pages/Login/Register';
 import MyPage from '@@pages/MyPage';
@@ -20,6 +21,7 @@ function Router() {
 
       <Route path={pathGenerator(PAGES.HOME)} element={<Home />} />
       <Route path={pathGenerator(PAGES.LECTURE)} element={<Lecture />} />
+      <Route path={pathGenerator(PAGES.LECTURE) + '/map'} element={<LectureMap />} />
       <Route path={pathGenerator(PAGES.MY_PAGE)} element={<MyPage />} />
 
       <Route path={pathGenerator(PAGES.PURCHASE)} element={<Purchase />} />
