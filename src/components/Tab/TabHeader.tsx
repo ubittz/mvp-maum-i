@@ -49,9 +49,7 @@ function TabHeader({ itemList, selectedIndex, onChange }: { itemList: string[]; 
   return (
     <StyledTabHeader $width={barPosition.width} $left={barPosition.left}>
       {itemList.map((item, index) => (
-        <TabBarItem key={index} selected={selectedIndex === index} onClick={() => onChange?.(index)}>
-          {item}
-        </TabBarItem>
+        <TabBarItem key={index} label={item} selected={selectedIndex === index} onClick={() => onChange?.(index)} />
       ))}
     </StyledTabHeader>
   );

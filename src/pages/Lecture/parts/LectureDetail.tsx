@@ -49,6 +49,11 @@ interface LectureDetailProps {
 function LectureDetail({ lecture }: LectureDetailProps) {
   const [selectedTabIndex, setSelectedTabIndex] = useState(0);
 
+  const handleTabChange = (index: number) => {
+    setSelectedTabIndex(index);
+    console.log(index);
+  };
+
   return (
     <StyledLectureDetail>
       {lecture.thumbnail ? <img src={lecture.thumbnail} alt={lecture.title} className='img' /> : <LectureThumbnail className='img' />}
@@ -56,13 +61,24 @@ function LectureDetail({ lecture }: LectureDetailProps) {
         <Typography.Button2 className='title__step'>[{lecture.stepTitle}]</Typography.Button2>
         <Typography.Title5 className='title__summary'>{lecture.summary}</Typography.Title5>
       </Flex.Vertical>
-      <Tab itemList={['상세정보', '통계', '리뷰']} selectedIndex={selectedTabIndex} onChange={setSelectedTabIndex}>
-        <Flex.Horizontal className='tab_container'>
-          <LectureDetailInfoContainer lecture={lecture} />
-          <LectureStatisticContainer lecture={lecture} />
-          <LectureStatisticContainer lecture={lecture} />
-        </Flex.Horizontal>
-      </Tab>
+      <Tab
+        itemList={[
+          {
+            label: '상세정보',
+            content: <LectureDetailInfoContainer lecture={lecture} />,
+          },
+          {
+            label: '통계',
+            content: <LectureStatisticContainer lecture={lecture} />,
+          },
+          {
+            label: '리뷰',
+            content: <LectureStatisticContainer lecture={lecture} />,
+          },
+        ]}
+        selectedIndex={selectedTabIndex}
+        onChange={handleTabChange}
+      />
     </StyledLectureDetail>
   );
 }
