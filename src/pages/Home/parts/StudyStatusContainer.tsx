@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { arrowRightIcon } from '@@assets/icons';
@@ -6,6 +7,8 @@ import Flex from '@@components/Flex';
 import Typography from '@@components/Typography';
 import { COLORS } from '@@constants/colors';
 import ProgressBar from '@@pages/Home/parts/ProgressBar';
+import { PAGES } from '@@router/constants';
+import { pathGenerator } from '@@router/utils';
 
 const StyledStudyStatusContainer = styled(Flex.Vertical)`
   border-radius: 24px;
@@ -52,10 +55,16 @@ const StyledStudyStatusContainer = styled(Flex.Vertical)`
 `;
 
 function StudyStatusContainer() {
+  const navigate = useNavigate();
+
   const userName: string = '최민정';
   const studyDay: number = 3;
   const studyTotal: number = 36;
   const studyProgress: number = 2;
+
+  const handleClickCurrentLecture = () => {
+    navigate(pathGenerator(`${PAGES.LECTURE}/map`));
+  };
 
   return (
     <StyledStudyStatusContainer>
@@ -77,7 +86,7 @@ function StudyStatusContainer() {
           <Typography.Subtitle1 className='text_highlight'>{studyProgress}</Typography.Subtitle1>
           <Typography.Subtitle1>차시까지 진행했습니다.</Typography.Subtitle1>
         </Flex.Horizontal>
-        <Button.Xlarge className='current_lecture__button' icon={arrowRightIcon}>
+        <Button.Xlarge className='current_lecture__button' icon={arrowRightIcon} onClick={handleClickCurrentLecture}>
           최근 본 공감강의 보러가기
         </Button.Xlarge>
       </Flex.Horizontal>
