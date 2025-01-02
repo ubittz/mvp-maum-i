@@ -9,25 +9,23 @@ import { PAGES } from '@@router/constants';
 import { pathGenerator } from '@@router/utils';
 
 const StyledGuideVideoContainer = styled(Flex.Vertical)`
-  flex: 1;
   width: 100%;
   height: 100%;
   padding: 8px 0 95px;
   align-items: center;
 
   .bottom_button {
-    flex: 0 0 auto;
+    margin: 12px 0;
     width: 320px;
   }
 `;
 
 const StyledGuideVideo = styled(Flex.Vertical)`
-  flex: 1;
   width: 100%;
+  height: 453px;
   align-items: center;
   background-color: ${COLORS.GRAY_SCALE_100};
   border-radius: 24px;
-  margin-bottom: 12px;
 
   .video_container {
     position: relative;
