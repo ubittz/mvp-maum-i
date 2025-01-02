@@ -34,6 +34,12 @@ const StyledLectureDetail = styled(Flex.Vertical)`
       font-weight: 800;
     }
   }
+
+  .tab_container {
+    flex: 1;
+    margin: 0 16px;
+    gap: 32px;
+  }
 `;
 
 interface LectureDetailProps {
@@ -51,9 +57,11 @@ function LectureDetail({ lecture }: LectureDetailProps) {
         <Typography.Title5 className='title__summary'>{lecture.summary}</Typography.Title5>
       </Flex.Vertical>
       <Tab itemList={['상세정보', '통계', '리뷰']} selectedIndex={selectedTabIndex} onChange={setSelectedTabIndex}>
-        <LectureDetailInfoContainer lecture={lecture} />
-        <LectureStatisticContainer />
-        <LectureStatisticContainer />
+        <Flex.Horizontal className='tab_container'>
+          <LectureDetailInfoContainer lecture={lecture} />
+          <LectureStatisticContainer lecture={lecture} />
+          <LectureStatisticContainer lecture={lecture} />
+        </Flex.Horizontal>
       </Tab>
     </StyledLectureDetail>
   );

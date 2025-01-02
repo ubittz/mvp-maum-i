@@ -7,6 +7,7 @@ import { COLORS } from '@@constants/colors';
 import { PlayButton } from '@@pages/Lecture/icons';
 import { PAGES } from '@@router/constants';
 import { pathGenerator } from '@@router/utils';
+
 const StyledGuideVideoContainer = styled(Flex.Vertical)`
   flex: 1;
   width: 100%;

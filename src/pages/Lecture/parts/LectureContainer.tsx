@@ -5,7 +5,7 @@ import Flex from '@@components/Flex';
 import Typography from '@@components/Typography';
 import { COLORS } from '@@constants/colors';
 
-const StyledLectureContainer = styled(Flex.Vertical)<{ padding?: string }>`
+const StyledLectureContainer = styled.div<{ padding?: string }>`
   flex: 1;
   width: 100%;
   height: 100%;
