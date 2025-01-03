@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import styled from 'styled-components';
 
 import { downChevronIcon } from '@@assets/icons';
@@ -43,6 +45,7 @@ const StyledLectureReviewContainer = styled(Flex.Vertical)`
   .bottom__container {
     margin: 0 16px;
     padding: 16px 0;
+
     .show__more__button {
       border: 1px solid ${COLORS.GRAY_SCALE_100};
       background-color: ${COLORS.GRAY_SCALE_000};
@@ -92,7 +95,13 @@ interface LectureReviewContainerProps {
 }
 
 function LectureReviewContainer({ lecture }: LectureReviewContainerProps) {
-  const averageScore = lecture.reviews.reduce((acc, review) => acc + review.score, 0) / lecture.reviews.length;
+  const [showAll, setShowAll] = useState(false);
+
+  const handleShowMore = () => {
+    setShowAll(true);
+  };
+
+  const reviewsToShow = showAll ? lecture.reviews : lecture.reviews.slice(0, 3);
 
   return (
     <StyledLectureReviewContainer>
@@ -109,10 +118,12 @@ function LectureReviewContainer({ lecture }: LectureReviewContainerProps) {
             추천순
           </Button.Xlarge>
           <Flex.Vertical className='summary__container'>
-            <Typography.Title3 className='average__score'>{averageScore}</Typography.Title3>
+            <Typography.Title3 className='average__score'>
+              {lecture.reviews.reduce((acc, review) => acc + review.score, 0) / lecture.reviews.length}
+            </Typography.Title3>
             <Flex.Horizontal>
               {Array.from({ length: 5 }).map((_, index) => (
-                <StarIcon key={index} fill={index <= averageScore - 1} />
+                <StarIcon key={index} fill={index <= lecture.reviews.reduce((acc, review) => acc + review.score, 0) / lecture.reviews.length - 1} />
               ))}
             </Flex.Horizontal>
             <Typography.Body3 className='review__count'>{`${lecture.reviews.length}개의 리뷰`}</Typography.Body3>
@@ -120,13 +131,15 @@ function LectureReviewContainer({ lecture }: LectureReviewContainerProps) {
         </ReviewSummaryContainer>
       </Flex.Vertical>
       <Flex.Vertical className='body'>
-        {lecture.reviews.map((review) => (
-          <LectureReviewRow key={review.id} review={review} />
-        ))}
+        {reviewsToShow.length > 0 && reviewsToShow.map((review) => <LectureReviewRow key={review.id} review={review} />)}
       </Flex.Vertical>
-      <Flex.Vertical className='bottom__container'>
-        <Button.Xlarge className='show__more__button'>더보기</Button.Xlarge>
-      </Flex.Vertical>
+      {lecture.reviews.length > 3 && !showAll && (
+        <Flex.Vertical className='bottom__container'>
+          <Button.Xlarge className='show__more__button' onClick={handleShowMore}>
+            더보기
+          </Button.Xlarge>
+        </Flex.Vertical>
+      )}
     </StyledLectureReviewContainer>
   );
 }
