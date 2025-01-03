@@ -19,8 +19,9 @@ const BasicButton =
   ({ theme = 'solid', ...props }: ButtonProps) => {
     return (
       <StyledBasicButton {...props} $size={size} $theme={theme}>
+        {props.iconPosition === 'left' && props.icon && <img src={props.icon} alt='icon' />}
         {props.children}
-        {props.icon && <img src={props.icon} alt='icon' />}
+        {props.iconPosition === 'right' && props.icon && <img src={props.icon} alt='icon' />}
       </StyledBasicButton>
     );
   };

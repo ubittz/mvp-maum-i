@@ -6,6 +6,7 @@ import { asType } from '@@types/common';
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   theme?: ButtonTheme;
   icon?: string;
+  iconPosition?: 'left' | 'right';
 }
 
 export type ButtonSize = asType<typeof BUTTON_SIZE>;

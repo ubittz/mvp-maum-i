@@ -86,7 +86,7 @@ function StudyStatusContainer() {
           <Typography.Subtitle1 className='text_highlight'>{studyProgress}</Typography.Subtitle1>
           <Typography.Subtitle1>차시까지 진행했습니다.</Typography.Subtitle1>
         </Flex.Horizontal>
-        <Button.Xlarge className='current_lecture__button' icon={arrowRightIcon} onClick={handleClickCurrentLecture}>
+        <Button.Xlarge className='current_lecture__button' icon={arrowRightIcon} iconPosition='right' onClick={handleClickCurrentLecture}>
           최근 본 공감강의 보러가기
         </Button.Xlarge>
       </Flex.Horizontal>

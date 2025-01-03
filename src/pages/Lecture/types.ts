@@ -11,7 +11,7 @@ interface Statistics {
   parentStatistics: StatisticsItem; // 부모 통계
 }
 
-interface Review {
+export interface Review {
   id: number;
   score: number;
   content: string;

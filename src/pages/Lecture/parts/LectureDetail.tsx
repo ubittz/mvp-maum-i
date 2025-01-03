@@ -10,6 +10,7 @@ import { Lecture } from '@@pages/Lecture/types';
 
 import { LectureThumbnail } from '../icons';
 import LectureDetailInfoContainer from './LectureDetailInfoContainer';
+import LectureReviewContainer from './LectureReviewContainer';
 import LectureStatisticContainer from './LectureStatisticContainer';
 
 const StyledLectureDetail = styled(Flex.Vertical)`
@@ -73,7 +74,7 @@ function LectureDetail({ lecture }: LectureDetailProps) {
           },
           {
             label: '리뷰',
-            content: <LectureStatisticContainer lecture={lecture} />,
+            content: <LectureReviewContainer lecture={lecture} />,
           },
         ]}
         selectedIndex={selectedTabIndex}

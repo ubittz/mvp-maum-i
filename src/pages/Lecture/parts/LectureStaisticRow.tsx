@@ -5,11 +5,13 @@ import Typography from '@@components/Typography';
 import { COLORS } from '@@constants/colors';
 
 const StyledStatisticRow = styled(Flex.Vertical)`
+  align-items: center;
   border-radius: 12px;
   background-color: ${COLORS.GRAY_SCALE_000};
   height: 138px;
 
   .title__container {
+    align-self: flex-start;
     height: 32px;
     margin: 16px;
     gap: 8px;
@@ -30,16 +32,33 @@ const StyledStatisticRow = styled(Flex.Vertical)`
     }
   }
 
-  .divider {
-    width: 1px;
-    height: 74px;
-    background-color: ${COLORS.GRAY_SCALE_100};
-  }
-
   .content__container {
-    justify-content: space-between;
-    margin: 16px;
-    gap: 8px;
+    margin: 0 0 28px;
+
+    .content__text__container {
+      align-items: center;
+      gap: 6px;
+
+      .sub__title__text {
+        padding-right: 68px;
+        font-weight: 800;
+      }
+
+      .count__text {
+        color: ${COLORS.MUSTARD_500};
+        font-size: 48px;
+      }
+      .unit__text {
+        color: ${COLORS.GRAY_SCALE_800};
+      }
+    }
+
+    .divider {
+      width: 2px;
+      height: 54px;
+      background-color: ${COLORS.GRAY_SCALE_100};
+      margin: 0 54px;
+    }
   }
 `;
 
@@ -58,7 +77,7 @@ const StatisticRow = ({ title, icon, subTitle, children }: StatisticRowProps) =>
         <Typography.Subtitle2 className='title__text'>{title}</Typography.Subtitle2>
         {subTitle && <Typography.Button3 className='sub__title__text'>{subTitle}</Typography.Button3>}
       </Flex.Horizontal>
-      {children}
+      <Flex.Horizontal className='content__container'>{children}</Flex.Horizontal>
     </StyledStatisticRow>
   );
 };

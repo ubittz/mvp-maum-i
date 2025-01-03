@@ -1,4 +1,31 @@
-import { Lecture, Step } from './types';
+import { Lecture, Step, Review } from './types';
+
+const dummyReviews: Review[] = [
+  {
+    id: 1,
+    content: '리뷰 1',
+    score: 4,
+    createdAt: '2024-01-01',
+  },
+  {
+    id: 2,
+    content: '리뷰 2',
+    score: 3,
+    createdAt: '2024-01-01',
+  },
+  {
+    id: 3,
+    content: '리뷰 3',
+    score: 5,
+    createdAt: '2024-01-01',
+  },
+  {
+    id: 4,
+    content: '리뷰 4',
+    score: 2,
+    createdAt: '2024-01-01',
+  },
+];
 
 const dummyLectures: Lecture[] = [
   {
@@ -22,7 +49,7 @@ const dummyLectures: Lecture[] = [
         empathy: 85,
       },
     },
-    reviews: [],
+    reviews: dummyReviews,
   },
   {
     id: 2,

@@ -1,5 +1,8 @@
 import { SVGProps } from 'react';
 
+import { COLORS } from '@@constants/colors';
+import { DefaultIconProps } from '@@types/common';
+
 export const PlayButton = (props: SVGProps<SVGSVGElement>) => (
   <svg width='94' height='94' viewBox='0 0 94 94' fill='none' xmlns='http://www.w3.org/2000/svg' {...props}>
     <mask id='mask0_40046_8423' style={{ maskType: 'alpha' }} maskUnits='userSpaceOnUse' x='0' y='0' width='94' height='94'>
@@ -107,3 +110,14 @@ export const EmpathyIcon = (props: SVGProps<SVGSVGElement>) => (
     </g>
   </svg>
 );
+
+export function StarIcon({ fill, ...props }: { fill?: boolean } & Omit<DefaultIconProps, 'fill'>) {
+  return (
+    <svg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg' {...props}>
+      <path
+        d='M7.99998 1.6001L9.97758 5.54962L14.4 6.18685L11.2 9.2594L11.9552 13.6001L7.99998 11.5496L4.04478 13.6001L4.79998 9.2594L1.59998 6.18685L6.02238 5.54962L7.99998 1.6001Z'
+        fill={fill ? '#FFB200' : COLORS.GRAY_SCALE_200}
+      />
+    </svg>
+  );
+}
