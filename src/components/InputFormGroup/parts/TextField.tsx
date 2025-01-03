@@ -1,3 +1,5 @@
+import { forwardRef } from 'react';
+
 import styled from 'styled-components';
 
 import { COLORS } from '@@constants/colors';
@@ -28,8 +30,8 @@ const StyledTextField = styled.input<{ $theme: TextFieldTheme }>`
   }
 `;
 
-const TextField = ({ theme = 'default', ...props }: TextFieldProps) => {
-  return <StyledTextField $theme={theme} {...props} />;
-};
+const TextField = forwardRef<HTMLInputElement, TextFieldProps>(({ theme = 'default', ...props }, ref) => {
+  return <StyledTextField $theme={theme} ref={ref} {...props} />;
+});
 
 export default TextField;

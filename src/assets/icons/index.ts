@@ -6,6 +6,7 @@ import googleIcon from './google.svg';
 import kakaoIcon from './kakao.svg';
 import leftChevronIcon from './left_chevron.svg';
 import naverIcon from './naver.svg';
+import xCircleIcon from './x_circle.svg';
 import xIcon from './x_icon.svg';
 
-export { appleIcon, googleIcon, kakaoIcon, leftChevronIcon, naverIcon, arrowLeftIcon, arrowRightIcon, xIcon, downChevronIcon };
+export { appleIcon, googleIcon, kakaoIcon, leftChevronIcon, naverIcon, arrowLeftIcon, arrowRightIcon, xIcon, downChevronIcon, xCircleIcon };

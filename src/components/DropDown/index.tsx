@@ -29,7 +29,7 @@ const StyledDropDown = styled(Flex.Vertical)<{ isOpen: boolean }>`
     z-index: 1;
     border-radius: 0 0 12px 12px;
     border: 1px solid ${COLORS.MAIN_200};
-    background-color: ${COLORS.MAIN_000};
+    background-color: ${COLORS.GRAY_SCALE_000};
   }
 
   .dropdown-item {

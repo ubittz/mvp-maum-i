@@ -8,6 +8,7 @@ const StyledPurchaseLeftContent = styled(Flex.Vertical)`
   width: 100%;
   height: 100%;
   padding: 16px 77px 36px 0;
+  box-shadow: inset -8px -10px 5px -5px ${COLORS.MAIN_200};
 
   .main_price__container {
     height: 48px;

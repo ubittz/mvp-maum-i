@@ -14,5 +14,6 @@ export interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement> {
 export interface InputFormGroupProps extends FormGroupProps {
   inputProps: InputHTMLAttributes<HTMLInputElement>;
   buttonProps?: ButtonHTMLAttributes<HTMLButtonElement>;
+  showDeleteIcon?: boolean;
   theme?: TextFieldTheme;
 }

@@ -7,6 +7,8 @@ import LectureMap from '@@pages/Lecture/LectureMap';
 import Login from '@@pages/Login';
 import Register from '@@pages/Login/Register';
 import MyPage from '@@pages/MyPage';
+import MyPageEdit from '@@pages/MyPage/ProfileEdit';
+import MyPagePayment from '@@pages/MyPage/PurchaseHistory';
 import Purchase from '@@pages/Purchase';
 import PurchaseSuccess from '@@pages/Purchase/Success';
 import { PAGES, ROUTE_PREFIX } from '@@router/constants';
@@ -20,9 +22,13 @@ function Router() {
       <Route path={pathGenerator(PAGES.AUTH) + '/register'} element={<Register />} />
 
       <Route path={pathGenerator(PAGES.HOME)} element={<Home />} />
+
       <Route path={pathGenerator(PAGES.LECTURE)} element={<Lecture />} />
       <Route path={pathGenerator(PAGES.LECTURE) + '/map'} element={<LectureMap />} />
+
       <Route path={pathGenerator(PAGES.MY_PAGE)} element={<MyPage />} />
+      <Route path={pathGenerator(PAGES.MY_PAGE) + '/edit'} element={<MyPageEdit />} />
+      <Route path={pathGenerator(PAGES.MY_PAGE) + '/payment'} element={<MyPagePayment />} />
 
       <Route path={pathGenerator(PAGES.PURCHASE)} element={<Purchase />} />
       <Route path={pathGenerator(PAGES.PURCHASE) + '/success'} element={<PurchaseSuccess />} />
