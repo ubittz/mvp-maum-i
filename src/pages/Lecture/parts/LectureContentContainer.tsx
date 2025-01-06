@@ -29,7 +29,7 @@ function LectureContentContainer({ content, onNext }: LectureContentContainerPro
   const [isToastVisible, setIsToastVisible] = useState(false);
   const timeoutIdRef = useRef<NodeJS.Timeout>();
 
-  const handleTouch = () => {
+  const handleInteraction = () => {
     setIsToastVisible(false);
     clearTimeout(timeoutIdRef.current);
     onNext();
@@ -44,13 +44,15 @@ function LectureContentContainer({ content, onNext }: LectureContentContainerPro
       setIsToastVisible(true);
     }, 3000);
 
-    window.addEventListener('touchstart', handleTouch);
+    window.addEventListener('touchstart', handleInteraction);
+    window.addEventListener('click', handleInteraction);
 
     return () => {
       // audio.pause();
       // audio.currentTime = 0;
       clearTimeout(timeoutIdRef.current);
-      window.removeEventListener('touchstart', handleTouch);
+      window.removeEventListener('touchstart', handleInteraction);
+      window.removeEventListener('click', handleInteraction);
     };
   });
 
