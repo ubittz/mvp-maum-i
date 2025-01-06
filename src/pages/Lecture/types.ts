@@ -29,6 +29,7 @@ export interface LectureContent {
   isNormalImage?: boolean;
   isTouchable?: boolean;
   touchCount?: number;
+  animation?: string[];
 }
 
 export interface Lecture {

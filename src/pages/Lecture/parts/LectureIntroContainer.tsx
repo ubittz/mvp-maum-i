@@ -61,14 +61,18 @@ function LectureIntroContainer({ introContent, isLast, onNext }: LectureIntroPag
       setIsToastVisible(true);
     }, 3000);
 
-    window.addEventListener('touchstart', handleTouch);
+    if (!isLast) {
+      window.addEventListener('touchstart', handleTouch);
+    }
 
     return () => {
       // audio.pause();
       // audio.currentTime = 0;
       setIsStartButtonVisible(isLast);
       clearTimeout(timeoutIdRef.current);
-      window.removeEventListener('touchstart', handleTouch);
+      if (!isLast) {
+        window.removeEventListener('touchstart', handleTouch);
+      }
     };
   });
 
@@ -77,7 +81,7 @@ function LectureIntroContainer({ introContent, isLast, onNext }: LectureIntroPag
       <AnimationView params={{ src: introContent.image, autoplay: true }} size={{ width: 886, height: 626 }} />
       {!isLast && <Toast message='화면을 터치하면 다음 페이지로 넘어가요' isVisible={isToastVisible} />}
       {isLast && (
-        <StartButton isVisible={isStartButtonVisible} onClick={onNext}>
+        <StartButton isVisible={true} onClick={onNext}>
           시작하기
         </StartButton>
       )}

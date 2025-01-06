@@ -25,11 +25,19 @@ function LecturePage() {
   const [touchCount, setTouchCount] = useState(0);
 
   const handleNext = () => {
-    if (touchCount > (lecture?.content?.[currentPage]?.touchCount || 0)) {
-      setCurrentPage((prev) => prev + 1);
-      setTouchCount(0);
+    if (touchCount > (lecture?.content?.[currentPage]?.animation?.length || 0)) {
+      handleNextPage();
     } else {
       setTouchCount(touchCount + 1);
+    }
+  };
+
+  const handleNextPage = () => {
+    if (currentPage === (lecture?.content?.length || 0) - 1) {
+      console.log('last page');
+    } else {
+      setCurrentPage(currentPage + 1);
+      setTouchCount(0);
     }
   };
 
@@ -37,7 +45,8 @@ function LecturePage() {
     if (currentPage === 0) {
       navigate(-1);
     } else {
-      setCurrentPage((prev) => prev - 1);
+      setCurrentPage(currentPage - 1);
+      setTouchCount(0);
     }
   };
 

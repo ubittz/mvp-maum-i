@@ -2,7 +2,6 @@ import { useEffect, useState, useRef } from 'react';
 
 import styled from 'styled-components';
 
-import background from '@@assets/images/background.png';
 import AnimationView from '@@components/AnimationContainer';
 import ClickAnimationContainer from '@@components/AnimationContainer/ClickAnimationContainer';
 import Toast from '@@components/Toast';
@@ -57,9 +56,9 @@ function LectureContentContainer({ content, onNext }: LectureContentContainerPro
 
   return (
     <StyledLectureIntroPage>
-      {content.isTouchable && content.touchCount ? (
+      {content.isTouchable && content.touchCount && content.animation ? (
         <ClickAnimationContainer
-          params={{ src: content.image, autoplay: true }}
+          params={{ src: content.image, autoplay: true, animations: content.animation }}
           size={{ width: 886, height: 626 }}
           maxTouchCount={content.touchCount}
         />
