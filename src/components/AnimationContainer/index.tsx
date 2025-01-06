@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+
 import { useRive, UseRiveParameters } from 'rive-react';
 
 interface AnimationViewProps {
@@ -9,7 +10,7 @@ interface AnimationViewProps {
   };
 }
 
-const AnimationView: React.FC<AnimationViewProps> = ({ params, size = { width: 600, height: 500 } }) => {
+const AnimationView: React.FC<AnimationViewProps> = ({ params, size }) => {
   const { RiveComponent, rive } = useRive(params);
 
   useEffect(() => {

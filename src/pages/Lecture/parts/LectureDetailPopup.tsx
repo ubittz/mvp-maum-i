@@ -1,9 +1,12 @@
+import { useNavigate } from 'react-router-dom';
 import { keyframes, styled } from 'styled-components';
 
 import Button from '@@components/Button';
 import Flex from '@@components/Flex';
 import { COLORS } from '@@constants/colors';
 import { Lecture } from '@@pages/Lecture/types';
+import { PAGES } from '@@router/constants';
+import { pathGenerator } from '@@router/utils';
 
 import LectureContainer from './LectureContainer';
 import LectureDetail from './LectureDetail';
@@ -62,8 +65,10 @@ interface LectureDetailPopupProps {
 }
 
 function LectureDetailPopup({ lecture, handleBack, isOpen }: LectureDetailPopupProps) {
+  const navigate = useNavigate();
+
   const handleStartLecture = () => {
-    console.log('시작하기');
+    navigate(pathGenerator(PAGES.LECTURE) + `/${lecture.id}/intro`);
   };
 
   return (

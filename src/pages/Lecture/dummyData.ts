@@ -1,3 +1,15 @@
+import intro1 from '@@assets/animations/01-01_표지.riv';
+import content2 from '@@assets/animations/1-1 1주 스토리보드-01.png';
+import content3 from '@@assets/animations/1-1 1주 스토리보드-02.png';
+import content4 from '@@assets/animations/1-1 1주 스토리보드-03.png';
+import content5 from '@@assets/animations/1-1 1주 스토리보드-04.png';
+import content6 from '@@assets/animations/1-1 1주 스토리보드-05.png';
+import content7 from '@@assets/animations/1-1 1주 스토리보드-06.png';
+import intro2 from '@@assets/animations/1-1_1주_스토리보드1.riv';
+// import content1 from '@@assets/animations/1-1_1주_스토리보드2.riv';
+import content8 from '@@assets/animations/1-1_1주_감정단어1.riv';
+import content9 from '@@assets/animations/1-1_1주_감정단어2.riv';
+
 import { Lecture, Step, Review } from './types';
 
 const dummyReviews: Review[] = [
@@ -27,13 +39,67 @@ const dummyReviews: Review[] = [
   },
 ];
 
-const dummyLectures: Lecture[] = [
+export const dummyLectures: Lecture[] = [
   {
     id: 1,
     stepTitle: 'Step 1',
     title: '1. 다양한 감정',
     summary: '첫 번째, 감정의 이야기 "다양한 감정"',
     description: 'Description for Lecture 1-1',
+    intro: [
+      {
+        image: intro1,
+      },
+      {
+        image: intro2,
+      },
+    ],
+    content: [
+      // {
+      //   image: content1,
+      //   isTouchable: true,
+      //   touchCount: 6,
+      // },
+      {
+        image: content2,
+        isNormalImage: true,
+        isTouchable: false,
+      },
+      {
+        image: content3,
+        isNormalImage: true,
+        isTouchable: false,
+      },
+      {
+        image: content4,
+        isNormalImage: true,
+        isTouchable: false,
+      },
+      {
+        image: content5,
+        isNormalImage: true,
+        isTouchable: false,
+      },
+      {
+        image: content6,
+        isNormalImage: true,
+        isTouchable: false,
+      },
+      {
+        image: content7,
+        isNormalImage: true,
+        isTouchable: false,
+      },
+      {
+        image: content8,
+        isTouchable: false,
+      },
+      {
+        image: content9,
+        isTouchable: true,
+        touchCount: 4,
+      },
+    ],
     statistics: {
       interaction: 5,
       childStatistics: {
@@ -74,7 +140,6 @@ const dummyLectures: Lecture[] = [
     },
     reviews: [],
   },
-  // ... (Lecture 1-3 to Lecture 1-6)
   {
     id: 3,
     stepTitle: 'Step 1',

@@ -11,6 +11,7 @@ const StyledLectureContainer = styled.div<{ padding?: string }>`
   height: 100%;
   padding: ${({ padding }) => padding};
   box-sizing: border-box;
+  background-color: ${COLORS.MAIN_100};
 `;
 
 const ContainerHeader = styled(Flex.Horizontal)<{ padding?: string }>`

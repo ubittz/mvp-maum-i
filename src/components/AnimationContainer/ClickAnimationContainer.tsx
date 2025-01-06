@@ -24,6 +24,7 @@ const ClickAnimationContainer: React.FC<ClickAnimationContainerProps> = ({ param
 
   // 애니메이션의 타임라인 전환 (순차적)
   useEffect(() => {
+    console.log('touchCount', touchCount);
     if (rive && params?.animations) {
       if (isRunning && touchCount < maxTouchCount) {
         rive.reset();

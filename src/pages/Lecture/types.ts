@@ -18,10 +18,25 @@ export interface Review {
   createdAt: string;
 }
 
+export interface LectureIntro {
+  image?: string;
+  audio?: string;
+}
+
+export interface LectureContent {
+  image?: string;
+  text?: string;
+  isNormalImage?: boolean;
+  isTouchable?: boolean;
+  touchCount?: number;
+}
+
 export interface Lecture {
   id: number;
   stepTitle: Step['title'];
   title: string;
+  intro?: LectureIntro[];
+  content?: LectureContent[];
   summary?: string;
   thumbnail?: string;
   description?: string;
