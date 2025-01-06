@@ -11,6 +11,10 @@ export interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement> {
   theme?: TextFieldTheme;
 }
 
+export interface LabelTextFieldProps extends TextFieldProps {
+  title: string;
+}
+
 export interface InputFormGroupProps extends FormGroupProps {
   inputProps: InputHTMLAttributes<HTMLInputElement>;
   buttonProps?: ButtonHTMLAttributes<HTMLButtonElement>;

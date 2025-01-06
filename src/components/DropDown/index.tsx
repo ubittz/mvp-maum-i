@@ -25,11 +25,13 @@ const StyledDropDown = styled(Flex.Vertical)<{ isOpen: boolean }>`
     position: absolute;
     top: 100%;
     left: 0;
+    overflow-y: scroll;
+    max-height: 340px;
     min-width: 100%;
     z-index: 1;
     border-radius: 0 0 12px 12px;
     border: 1px solid ${COLORS.MAIN_200};
-    background-color: ${COLORS.GRAY_SCALE_000};
+    background-color: ${COLORS.MAIN_100};
   }
 
   .dropdown-item {
