@@ -83,7 +83,7 @@ function LectureFinish() {
   };
 
   const handleConfirm = () => {
-    navigate(pathGenerator(PAGES.LECTURE));
+    navigate(pathGenerator(`${PAGES.LECTURE}/map`));
   };
 
   return (
