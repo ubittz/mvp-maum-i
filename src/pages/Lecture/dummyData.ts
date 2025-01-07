@@ -97,18 +97,33 @@ export const dummyLectures: Lecture[] = [
       },
     ],
     statistics: {
-      interaction: 5,
+      interaction: 28,
       childStatistics: {
-        participation: 80,
-        expression: 70,
-        emotionRecognition: 60,
-        empathy: 90,
+        participation: 22,
+        expression: 36,
+        emotionRecognition: 28,
+        empathy: 28,
       },
       parentStatistics: {
-        participation: 75,
-        expression: 65,
-        emotionRecognition: 55,
-        empathy: 85,
+        participation: 18,
+        expression: 32,
+        emotionRecognition: 22,
+        empathy: 27,
+      },
+    },
+    averageStatistics: {
+      interaction: 26,
+      childStatistics: {
+        participation: 18,
+        expression: 32,
+        emotionRecognition: 13,
+        empathy: 25,
+      },
+      parentStatistics: {
+        participation: 22,
+        expression: 36,
+        emotionRecognition: 28,
+        empathy: 28,
       },
     },
     reviews: dummyReviews,
@@ -134,6 +149,21 @@ export const dummyLectures: Lecture[] = [
         empathy: 75,
       },
     },
+    averageStatistics: {
+      interaction: 5,
+      childStatistics: {
+        participation: 80,
+        expression: 70,
+        emotionRecognition: 60,
+        empathy: 90,
+      },
+      parentStatistics: {
+        participation: 75,
+        expression: 65,
+        emotionRecognition: 55,
+        empathy: 85,
+      },
+    },
     reviews: [],
   },
   {
@@ -155,6 +185,21 @@ export const dummyLectures: Lecture[] = [
         expression: 55,
         emotionRecognition: 45,
         empathy: 70,
+      },
+    },
+    averageStatistics: {
+      interaction: 5,
+      childStatistics: {
+        participation: 80,
+        expression: 70,
+        emotionRecognition: 60,
+        empathy: 90,
+      },
+      parentStatistics: {
+        participation: 75,
+        expression: 65,
+        emotionRecognition: 55,
+        empathy: 85,
       },
     },
     reviews: [],
@@ -180,6 +225,21 @@ export const dummyLectures: Lecture[] = [
         empathy: 65,
       },
     },
+    averageStatistics: {
+      interaction: 5,
+      childStatistics: {
+        participation: 80,
+        expression: 70,
+        emotionRecognition: 60,
+        empathy: 90,
+      },
+      parentStatistics: {
+        participation: 75,
+        expression: 65,
+        emotionRecognition: 55,
+        empathy: 85,
+      },
+    },
     reviews: [],
   },
   {
@@ -203,6 +263,21 @@ export const dummyLectures: Lecture[] = [
         empathy: 60,
       },
     },
+    averageStatistics: {
+      interaction: 5,
+      childStatistics: {
+        participation: 80,
+        expression: 70,
+        emotionRecognition: 60,
+        empathy: 90,
+      },
+      parentStatistics: {
+        participation: 75,
+        expression: 65,
+        emotionRecognition: 55,
+        empathy: 85,
+      },
+    },
     reviews: [],
   },
   {
@@ -224,6 +299,21 @@ export const dummyLectures: Lecture[] = [
         expression: 40,
         emotionRecognition: 30,
         empathy: 55,
+      },
+    },
+    averageStatistics: {
+      interaction: 5,
+      childStatistics: {
+        participation: 80,
+        expression: 70,
+        emotionRecognition: 60,
+        empathy: 90,
+      },
+      parentStatistics: {
+        participation: 75,
+        expression: 65,
+        emotionRecognition: 55,
+        empathy: 85,
       },
     },
     reviews: [],

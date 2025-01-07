@@ -5,7 +5,7 @@ interface StatisticsItem {
   empathy: number; //공감반응
 }
 
-interface Statistics {
+export interface Statistics {
   interaction: number; //상호작용 정도
   childStatistics: StatisticsItem; // 아이 통계
   parentStatistics: StatisticsItem; // 부모 통계
@@ -42,6 +42,7 @@ export interface Lecture {
   thumbnail?: string;
   description?: string;
   statistics: Statistics;
+  averageStatistics: Statistics;
   reviews: Review[];
 }
 

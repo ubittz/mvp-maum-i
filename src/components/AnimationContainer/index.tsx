@@ -22,7 +22,7 @@ const AnimationView: React.FC<AnimationViewProps> = ({ params, size }) => {
 
   return (
     <div>
-      <div style={{ width: size.width, height: size.height }}>
+      <div style={{ width: size?.width, height: size?.height }}>
         <RiveComponent />
       </div>
     </div>

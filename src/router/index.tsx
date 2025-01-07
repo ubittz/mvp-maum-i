@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import Error from '@@pages/Error';
 import Home from '@@pages/Home';
 import Lecture from '@@pages/Lecture';
+import LectureFinish from '@@pages/Lecture/LectureFinish';
 import LectureIntroPage from '@@pages/Lecture/LectureIntroPage';
 import LectureMap from '@@pages/Lecture/LectureMap';
 import LecturePage from '@@pages/Lecture/LecturePage';
@@ -29,6 +30,7 @@ function Router() {
       <Route path={pathGenerator(PAGES.LECTURE) + '/map'} element={<LectureMap />} />
       <Route path={pathGenerator(PAGES.LECTURE) + '/:lectureId/intro'} element={<LectureIntroPage />} />
       <Route path={pathGenerator(PAGES.LECTURE) + '/:lectureId/content'} element={<LecturePage />} />
+      <Route path={pathGenerator(PAGES.LECTURE) + '/:lectureId/finish'} element={<LectureFinish />} />
 
       <Route path={pathGenerator(PAGES.MY_PAGE)} element={<MyPage />} />
       <Route path={pathGenerator(PAGES.MY_PAGE) + '/edit'} element={<MyPageEdit />} />

@@ -49,13 +49,25 @@ function LectureIntroContainer({ introContent, isLast, onNext }: LectureIntroPag
     onNext();
   };
 
+  const setAudio = () => {
+    const audio = new Audio(introContent.audio);
+    audio.loop = true;
+    audio.play();
+    audio.onended = handleAudioEnd;
+    return audio;
+  };
+
+  const handleAudioEnd = () => {
+    setIsStartButtonVisible(true);
+  };
+
+  const removeAudio = (audio: HTMLAudioElement) => {
+    audio.pause();
+    audio.currentTime = 0;
+  };
+
   useEffect(() => {
-    // const audio = new Audio(background);
-    // audio.loop = true;
-    // audio.play();
-    // audio.onended = () => {
-    //   setIsStartButtonVisible(true);
-    // };
+    const audio = setAudio();
 
     timeoutIdRef.current = setTimeout(() => {
       setIsToastVisible(true);
@@ -66,8 +78,7 @@ function LectureIntroContainer({ introContent, isLast, onNext }: LectureIntroPag
     }
 
     return () => {
-      // audio.pause();
-      // audio.currentTime = 0;
+      removeAudio(audio);
       setIsStartButtonVisible(isLast);
       clearTimeout(timeoutIdRef.current);
       if (!isLast) {
@@ -81,7 +92,7 @@ function LectureIntroContainer({ introContent, isLast, onNext }: LectureIntroPag
       <AnimationView params={{ src: introContent.image, autoplay: true }} size={{ width: 886, height: 626 }} />
       {!isLast && <Toast message='화면을 터치하면 다음 페이지로 넘어가요' isVisible={isToastVisible} />}
       {isLast && (
-        <StartButton isVisible={true} onClick={onNext}>
+        <StartButton isVisible={isStartButtonVisible} onClick={onNext}>
           시작하기
         </StartButton>
       )}

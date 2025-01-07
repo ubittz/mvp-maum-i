@@ -121,3 +121,110 @@ export function StarIcon({ fill, ...props }: { fill?: boolean } & Omit<DefaultIc
     </svg>
   );
 }
+
+export const StatisticIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg width='33' height='32' viewBox='0 0 33 32' fill='none' xmlns='http://www.w3.org/2000/svg' {...props}>
+    <rect x='0.5' width='32' height='32' rx='16' fill='#FFF0CC' />
+    <mask id='mask0_40060_11891' style={{ maskType: 'alpha' }} maskUnits='userSpaceOnUse' x='4' y='4' width='25' height='24'>
+      <rect x='4.5' y='4' width='24' height='24' fill='#D9D9D9' />
+    </mask>
+    <g mask='url(#mask0_40060_11891)'>
+      <path
+        d='M21.5 24C21.2167 24 20.9792 23.9042 20.7875 23.7125C20.5958 23.5208 20.5 23.2833 20.5 23V18C20.5 17.7167 20.5958 17.4792 20.7875 17.2875C20.9792 17.0958 21.2167 17 21.5 17H23.5C23.7833 17 24.0208 17.0958 24.2125 17.2875C24.4042 17.4792 24.5 17.7167 24.5 18V23C24.5 23.2833 24.4042 23.5208 24.2125 23.7125C24.0208 23.9042 23.7833 24 23.5 24H21.5ZM15.5 24C15.2167 24 14.9792 23.9042 14.7875 23.7125C14.5958 23.5208 14.5 23.2833 14.5 23V9C14.5 8.71667 14.5958 8.47917 14.7875 8.2875C14.9792 8.09583 15.2167 8 15.5 8H17.5C17.7833 8 18.0208 8.09583 18.2125 8.2875C18.4042 8.47917 18.5 8.71667 18.5 9V23C18.5 23.2833 18.4042 23.5208 18.2125 23.7125C18.0208 23.9042 17.7833 24 17.5 24H15.5ZM9.5 24C9.21667 24 8.97917 23.9042 8.7875 23.7125C8.59583 23.5208 8.5 23.2833 8.5 23V14C8.5 13.7167 8.59583 13.4792 8.7875 13.2875C8.97917 13.0958 9.21667 13 9.5 13H11.5C11.7833 13 12.0208 13.0958 12.2125 13.2875C12.4042 13.4792 12.5 13.7167 12.5 14V23C12.5 23.2833 12.4042 23.5208 12.2125 23.7125C12.0208 23.9042 11.7833 24 11.5 24H9.5Z'
+        fill='#FFB200'
+      />
+    </g>
+  </svg>
+);
+
+export const StatisticValueGray = (props: SVGProps<SVGSVGElement>) => (
+  <svg width='80' height='58' viewBox='0 0 80 58' fill='none' xmlns='http://www.w3.org/2000/svg' {...props}>
+    <g filter='url(#filter0_bddi_40254_5914)'>
+      <path
+        fill-rule='evenodd'
+        clip-rule='evenodd'
+        d='M15 4C9.47715 4 5 8.47715 5 14V34C5 39.5228 9.47715 44 15 44H23.4995H26.719L52.4751 44L65 44C70.5229 44 75 39.5228 75 34V14C75 8.47715 70.5229 4 65 4H15ZM37.1824 50.7368C36.8465 50.3853 36.5455 50.0631 36.2577 49.755C35.1666 48.5868 34.2638 47.6203 32.3532 46.0211C29.9558 44.0145 26.7651 44.0001 26.7195 44L52.4607 44C48.4488 44.0016 47.6439 44.6753 46.0361 46.0211C44.4264 47.3684 42.8166 49.0526 41.2069 50.7368L41.2068 50.7368C39.5971 52.4211 38.7922 52.4211 37.1824 50.7368Z'
+        fill='#262626'
+        style={{ mixBlendMode: 'plus-lighter' }}
+      />
+      <path
+        fill-rule='evenodd'
+        clip-rule='evenodd'
+        d='M15 4C9.47715 4 5 8.47715 5 14V34C5 39.5228 9.47715 44 15 44H23.4995H26.719L52.4751 44L65 44C70.5229 44 75 39.5228 75 34V14C75 8.47715 70.5229 4 65 4H15ZM37.1824 50.7368C36.8465 50.3853 36.5455 50.0631 36.2577 49.755C35.1666 48.5868 34.2638 47.6203 32.3532 46.0211C29.9558 44.0145 26.7651 44.0001 26.7195 44L52.4607 44C48.4488 44.0016 47.6439 44.6753 46.0361 46.0211C44.4264 47.3684 42.8166 49.0526 41.2069 50.7368L41.2068 50.7368C39.5971 52.4211 38.7922 52.4211 37.1824 50.7368Z'
+        fill='#F1F2F3'
+      />
+    </g>
+    <defs>
+      <filter id='filter0_bddi_40254_5914' x='-75' y='-76' width='230' height='208' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'>
+        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feGaussianBlur in='BackgroundImageFix' stdDeviation='40' />
+        <feComposite in2='SourceAlpha' operator='in' result='effect1_backgroundBlur_40254_5914' />
+        <feColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha' />
+        <feOffset />
+        <feGaussianBlur stdDeviation='1.5' />
+        <feComposite in2='hardAlpha' operator='out' />
+        <feColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.55 0' />
+        <feBlend mode='normal' in2='effect1_backgroundBlur_40254_5914' result='effect2_dropShadow_40254_5914' />
+        <feColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha' />
+        <feOffset dy='1' />
+        <feGaussianBlur stdDeviation='2.5' />
+        <feComposite in2='hardAlpha' operator='out' />
+        <feColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0' />
+        <feBlend mode='normal' in2='effect2_dropShadow_40254_5914' result='effect3_dropShadow_40254_5914' />
+        <feBlend mode='normal' in='SourceGraphic' in2='effect3_dropShadow_40254_5914' result='shape' />
+        <feColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha' />
+        <feOffset />
+        <feGaussianBlur stdDeviation='1.5' />
+        <feComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1' />
+        <feColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.1 0' />
+        <feBlend mode='normal' in2='shape' result='effect4_innerShadow_40254_5914' />
+      </filter>
+    </defs>
+  </svg>
+);
+
+export const StatisticValueYellow = (props: SVGProps<SVGSVGElement>) => (
+  <svg width='80' height='58' viewBox='0 0 80 58' fill='none' xmlns='http://www.w3.org/2000/svg' {...props}>
+    <g filter='url(#filter0_bddi_40254_5908)'>
+      <path
+        fill-rule='evenodd'
+        clip-rule='evenodd'
+        d='M15 4C9.47715 4 5 8.47715 5 14V34C5 39.5228 9.47715 44 15 44H23.4995H26.719L52.4751 44L65 44C70.5229 44 75 39.5228 75 34V14C75 8.47715 70.5229 4 65 4H15ZM37.1824 50.7368C36.8465 50.3853 36.5455 50.0631 36.2577 49.755C35.1666 48.5868 34.2638 47.6203 32.3532 46.0211C29.9558 44.0145 26.7651 44.0001 26.7195 44L52.4607 44C48.4488 44.0016 47.6439 44.6753 46.0361 46.0211C44.4264 47.3684 42.8166 49.0526 41.2069 50.7368L41.2068 50.7368C39.5971 52.4211 38.7922 52.4211 37.1824 50.7368Z'
+        fill='#262626'
+        style={{ mixBlendMode: 'plus-lighter' }}
+      />
+      <path
+        fill-rule='evenodd'
+        clip-rule='evenodd'
+        d='M15 4C9.47715 4 5 8.47715 5 14V34C5 39.5228 9.47715 44 15 44H23.4995H26.719L52.4751 44L65 44C70.5229 44 75 39.5228 75 34V14C75 8.47715 70.5229 4 65 4H15ZM37.1824 50.7368C36.8465 50.3853 36.5455 50.0631 36.2577 49.755C35.1666 48.5868 34.2638 47.6203 32.3532 46.0211C29.9558 44.0145 26.7651 44.0001 26.7195 44L52.4607 44C48.4488 44.0016 47.6439 44.6753 46.0361 46.0211C44.4264 47.3684 42.8166 49.0526 41.2069 50.7368L41.2068 50.7368C39.5971 52.4211 38.7922 52.4211 37.1824 50.7368Z'
+        fill='#FFF7E6'
+      />
+    </g>
+    <defs>
+      <filter id='filter0_bddi_40254_5908' x='-75' y='-76' width='230' height='208' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'>
+        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feGaussianBlur in='BackgroundImageFix' stdDeviation='40' />
+        <feComposite in2='SourceAlpha' operator='in' result='effect1_backgroundBlur_40254_5908' />
+        <feColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha' />
+        <feOffset />
+        <feGaussianBlur stdDeviation='1.5' />
+        <feComposite in2='hardAlpha' operator='out' />
+        <feColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.55 0' />
+        <feBlend mode='normal' in2='effect1_backgroundBlur_40254_5908' result='effect2_dropShadow_40254_5908' />
+        <feColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha' />
+        <feOffset dy='1' />
+        <feGaussianBlur stdDeviation='2.5' />
+        <feComposite in2='hardAlpha' operator='out' />
+        <feColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0' />
+        <feBlend mode='normal' in2='effect2_dropShadow_40254_5908' result='effect3_dropShadow_40254_5908' />
+        <feBlend mode='normal' in='SourceGraphic' in2='effect3_dropShadow_40254_5908' result='shape' />
+        <feColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha' />
+        <feOffset />
+        <feGaussianBlur stdDeviation='1.5' />
+        <feComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1' />
+        <feColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.1 0' />
+        <feBlend mode='normal' in2='shape' result='effect4_innerShadow_40254_5908' />
+      </filter>
+    </defs>
+  </svg>
+);

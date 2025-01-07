@@ -4,6 +4,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
 import FullScreen from '@@components/FullScreen';
+import { PAGES } from '@@router/constants';
+import { pathGenerator } from '@@router/utils';
 
 import { dummyLectures } from './dummyData';
 import LectureContainer from './parts/LectureContainer';
@@ -34,7 +36,8 @@ function LecturePage() {
 
   const handleNextPage = () => {
     if (currentPage === (lecture?.content?.length || 0) - 1) {
-      console.log('last page');
+      // 결과 화면으로 이동
+      navigate(`${pathGenerator(PAGES.LECTURE)}/${lectureId}/finish`);
     } else {
       setCurrentPage(currentPage + 1);
       setTouchCount(0);

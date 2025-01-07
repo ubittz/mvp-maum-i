@@ -9,7 +9,7 @@ import { COLORS } from '@@constants/colors';
 const StyledTabHeader = styled(Flex.Horizontal)<{ $width: number; $left: number }>`
   position: relative;
   height: 52px;
-  border-bottom: 1px solid ${COLORS.GRAY_SCALE_050};
+  border-bottom: 1px solid ${COLORS.MAIN_200};
   padding: 0 16px;
   justify-content: space-between;
 
