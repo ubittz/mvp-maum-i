@@ -23,6 +23,12 @@ export interface LectureIntro {
   audio?: string;
 }
 
+interface LectureMessage {
+  title: string;
+  content: string;
+  icon: string;
+}
+
 export interface LectureContent {
   image?: string;
   text?: string;
@@ -30,6 +36,7 @@ export interface LectureContent {
   isTouchable?: boolean;
   touchCount?: number;
   animation?: string[];
+  lastMessage?: LectureMessage;
 }
 
 export interface Lecture {

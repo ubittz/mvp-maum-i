@@ -9,6 +9,7 @@ import intro2 from '@@assets/animations/1-1_1주_스토리보ᄃ�
 // import content1 from '@@assets/animations/1-1_1주_스토리보드2.riv';
 import animationContent1 from '@@assets/animations/1-1_1주_감정단어1.riv';
 import touchableContent1 from '@@assets/animations/1-1_1주_감정단어2.riv';
+import { checkIcon, magnifyIcon, questionMarkIcon } from '@@assets/icons';
 
 import { Lecture, Step, Review } from './types';
 
@@ -86,14 +87,45 @@ export const dummyLectures: Lecture[] = [
         isTouchable: false,
       },
       {
+        image: content6,
+        isNormalImage: true,
+        isTouchable: false,
+        lastMessage: {
+          title: '한 줄 문구',
+          content: '우리도 마음속 다양한 감정을 만나러 출발해 볼까요?',
+          icon: checkIcon,
+        },
+      },
+      {
         image: animationContent1,
         isTouchable: false,
+      },
+      {
+        image: animationContent1,
+        isTouchable: false,
+        lastMessage: {
+          title: '알아보기',
+          icon: magnifyIcon,
+          content: `우리는 어떨 때 ‘아, 궁금해’라는 마음이 들까요?
+          먼저 공감이는 무엇이 궁금한지 알아보기로 해요.`,
+        },
       },
       {
         image: touchableContent1,
         isTouchable: true,
         touchCount: 4,
         animation: ['Timeline 4', 'Timeline 1', 'Timeline 2', 'Timeline 3'],
+      },
+      {
+        image: touchableContent1,
+        isTouchable: true,
+        touchCount: 4,
+        animation: ['Timeline 3'],
+        lastMessage: {
+          title: '생각해보기',
+          content: '나는 요즘에 무엇이 궁금해요? ',
+          icon: questionMarkIcon,
+        },
       },
     ],
     statistics: {

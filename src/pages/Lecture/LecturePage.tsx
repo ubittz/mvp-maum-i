@@ -56,7 +56,13 @@ function LecturePage() {
   return (
     <StyledLecturePage>
       <LectureContainer title={lecture?.title || ''} onBack={handleBack} padding='0 32px'>
-        {lecture?.content?.[currentPage] && <LectureContentContainer content={lecture?.content?.[currentPage]} onNext={handleNext} />}
+        {lecture?.content?.[currentPage] && (
+          <LectureContentContainer
+            content={lecture?.content?.[currentPage]}
+            isLastPage={currentPage === (lecture?.content?.length || 0) - 1}
+            onNext={handleNext}
+          />
+        )}
       </LectureContainer>
     </StyledLecturePage>
   );
