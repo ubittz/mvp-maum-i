@@ -14,6 +14,7 @@ const StyledLectureIntroPage = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   & img {
     width: 886px;
@@ -73,22 +74,15 @@ function LectureIntroContainer({ introContent, isLast, onNext }: LectureIntroPag
       setIsToastVisible(true);
     }, 3000);
 
-    if (!isLast) {
-      window.addEventListener('touchstart', handleTouch);
-    }
-
     return () => {
       removeAudio(audio);
       setIsStartButtonVisible(isLast);
       clearTimeout(timeoutIdRef.current);
-      if (!isLast) {
-        window.removeEventListener('touchstart', handleTouch);
-      }
     };
   });
 
   return (
-    <StyledLectureIntroPage>
+    <StyledLectureIntroPage onClick={handleTouch}>
       <AnimationView params={{ src: introContent.image, autoplay: true }} size={{ width: 886, height: 626 }} />
       {!isLast && <Toast message='화면을 터치하면 다음 페이지로 넘어가요' isVisible={isToastVisible} />}
       {isLast && (

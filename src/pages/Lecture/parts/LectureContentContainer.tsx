@@ -16,7 +16,7 @@ const StyledLectureContentContainer = styled.div<{ isBottomButtonVisible: boolea
   display: flex;
   justify-content: center;
   align-items: center;
-
+  cursor: pointer;
   & img {
     width: 886px;
     height: 626px;
@@ -63,21 +63,16 @@ function LectureContentContainer({ content, isLastPage, onNext }: LectureContent
       setIsBottomButtonVisible(true);
     }, audio.duration + 3000);
 
-    window.addEventListener('touchstart', handleInteraction);
-    window.addEventListener('click', handleInteraction);
-
     return () => {
       // audio.pause();
       // audio.currentTime = 0;
       clearTimeout(timeoutIdRef.current);
-      window.removeEventListener('touchstart', handleInteraction);
-      window.removeEventListener('click', handleInteraction);
     };
   });
 
   return (
     <>
-      <StyledLectureContentContainer isBottomButtonVisible={isBottomButtonVisible}>
+      <StyledLectureContentContainer isBottomButtonVisible={isBottomButtonVisible} onClick={handleInteraction}>
         {content.isTouchable && content.touchCount && content.animation ? (
           <ClickAnimationContainer
             params={{ src: content.image, autoplay: true, animations: content.animation }}
