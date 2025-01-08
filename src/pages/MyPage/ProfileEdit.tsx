@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
-import profileThumbnail from '@@assets/images/profile_Thumbnail.png';
+import profileThumbnail from '@@assets/images/profile_thumbnail.png';
 import Button from '@@components/Button';
 import Flex from '@@components/Flex';
 import FullScreen from '@@components/FullScreen';
