@@ -13,12 +13,12 @@ import LectureDetail from './LectureDetail';
 
 const slideIn = keyframes`
   from {
-    transform: translateY(100%); // 밑에서 위로
-    opacity: 0; // 투명도 0
+    transform: translateY(100%);
+    opacity: 0;
   }
   to {
-    transform: translateY(0); // 원래 위치로
-    opacity: 1; // 완전 불투명
+    transform: translateY(0);
+    opacity: 1;
   }
 `;
 
@@ -73,7 +73,7 @@ function LectureDetailPopup({ lecture, handleBack, isOpen }: LectureDetailPopupP
 
   return (
     <StyledLectureDetailPopup isOpen={isOpen}>
-      <LectureContainer title={lecture.title} padding='0px' onBack={handleBack}>
+      <LectureContainer title={lecture.title} padding='0px' onBack={handleBack} isHeaderSticky>
         <LectureDetail lecture={lecture} />
         <Flex.Vertical className='bottom__button_container'>
           <Button.Xlarge className='button' onClick={handleStartLecture}>
