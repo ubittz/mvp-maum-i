@@ -17,6 +17,10 @@ const StyledFooter = styled(Flex.Horizontal)`
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    .logo__text {
+      color: ${COLORS.GRAY_SCALE_600};
+      font-weight: 800;
+    }
   }
 
   .right_container {
@@ -36,7 +40,7 @@ function Footer() {
     <StyledFooter>
       <Flex.Horizontal className='left_container'>
         {/* TODO: 로고 추가 */}
-        <Typography.Body1>마음아이</Typography.Body1>
+        <Typography.Body1 className='logo__text'>마음아이</Typography.Body1>
       </Flex.Horizontal>
       <Flex.Horizontal className='right_container'>
         <Typography.Caption2>
