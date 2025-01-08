@@ -17,17 +17,21 @@ const StyledLectureContentContainer = styled.div<{ isBottomButtonVisible: boolea
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  & img {
+
+  .normal_image {
     width: 886px;
     height: 626px;
+    cursor: pointer;
   }
 
   .bottom_button {
-    position: absolute;
-    bottom: 44px;
+    position: fixed;
+    bottom: 42px;
     left: 50%;
-    transform: translateX(-50%);
+    z-index: 1000;
     width: 320px;
+    transform: translateX(-50%);
+    transition: opacity 0.5s ease-in-out;
     opacity: ${({ isBottomButtonVisible }) => (isBottomButtonVisible ? 1 : 0)};
   }
 `;
@@ -80,7 +84,7 @@ function LectureContentContainer({ content, isLastPage, onNext }: LectureContent
             maxTouchCount={content.touchCount}
           />
         ) : content.isNormalImage ? (
-          <img src={content.image} alt='lecture content' />
+          <img className='normal_image' src={content.image} alt='lecture content' onClick={handleInteraction} />
         ) : (
           <AnimationView params={{ src: content.image, autoplay: true }} size={{ width: 886, height: 626 }} />
         )}

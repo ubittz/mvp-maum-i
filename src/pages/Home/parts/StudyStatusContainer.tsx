@@ -75,7 +75,7 @@ function StudyStatusContainer() {
           <Typography.Title1>님</Typography.Title1>
         </Flex.Horizontal>
         <Flex.Horizontal>
-          <Typography.Title1>공감우리와 함께한지&nbsp;</Typography.Title1>
+          <Typography.Title1>마음아이와 함께한지&nbsp;</Typography.Title1>
           <Typography.Title1 className='text_highlight'>{studyDay}</Typography.Title1>
           <Typography.Title1>일째입니다.</Typography.Title1>
         </Flex.Horizontal>

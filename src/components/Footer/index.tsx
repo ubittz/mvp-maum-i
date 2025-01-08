@@ -36,11 +36,11 @@ function Footer() {
     <StyledFooter>
       <Flex.Horizontal className='left_container'>
         {/* TODO: 로고 추가 */}
-        <Typography.Body1>공감아이</Typography.Body1>
+        <Typography.Body1>마음아이</Typography.Body1>
       </Flex.Horizontal>
       <Flex.Horizontal className='right_container'>
         <Typography.Caption2>
-          사업자정보 (주)공감우리
+          사업자정보 (주)마음아이
           <br />
           대표자명 남재현
         </Typography.Caption2>
@@ -50,7 +50,7 @@ function Footer() {
           주소 서울특별시 금천구 벚꽃로 286, 507-259호(가산동, 삼성리더스타워)
         </Typography.Caption2>
         <Typography.Caption2>
-          (주)공감우리 고객센터
+          (주)마음아이 고객센터
           <br />
           운영시간 : 10:00 ~ 17:00
         </Typography.Caption2>

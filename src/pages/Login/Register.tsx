@@ -130,7 +130,7 @@ function Register() {
         children={step === 1 ? <RegisterStep1 onNext={handleNext} /> : <RegisterStep2 onNext={handleNext} />}
       />
       {showSuccessAlert && (
-        <Alert title='회원가입 완료' text={`공감아이(가제)의 회원가입이\n완료되었습니다.`}>
+        <Alert title='회원가입 완료' text={`마음아이의 회원가입이\n완료되었습니다.`}>
           <Button.Large className='tw-w-full' theme='solid' onClick={() => handleConfirm()}>
             확인하기
           </Button.Large>
