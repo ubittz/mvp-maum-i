@@ -27,25 +27,29 @@ function LectureIntroPage() {
   const [currentPage, setCurrentPage] = useState(0);
 
   const handleNext = () => {
-    if (currentPage === intro!.length - 1) {
-      navigate(`${pathGenerator(PAGES.LECTURE)}/${lectureId}/content`);
+    if (currentPage < (intro?.length || 0) - 1) {
+      setCurrentPage((prevPage) => prevPage + 1);
     } else {
-      setCurrentPage(currentPage + 1);
+      navigate(`${pathGenerator(PAGES.LECTURE)}/${lectureId}/content`);
     }
   };
 
   const handleBack = () => {
-    if (currentPage === 0) {
-      navigate(pathGenerator(PAGES.LECTURE));
+    if (currentPage > 0) {
+      setCurrentPage((prevPage) => prevPage - 1);
     } else {
-      setCurrentPage(currentPage - 1);
+      navigate(pathGenerator(PAGES.LECTURE));
     }
   };
 
   return (
     <StyledLecturePage>
       <LectureContainer title={lecture?.title || ''} onBack={handleBack} padding='0 32px'>
-        <LectureIntroContainer introContent={lecture?.intro?.[currentPage] ?? {}} isLast={intro?.length === currentPage + 1} onNext={handleNext} />
+        <LectureIntroContainer
+          introContent={lecture?.intro?.[currentPage] ?? {}}
+          isLastPage={intro?.length === currentPage + 1}
+          onNext={handleNext}
+        />
       </LectureContainer>
     </StyledLecturePage>
   );

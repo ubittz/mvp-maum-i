@@ -35,17 +35,18 @@ const StartButton = styled(Button.Xlarge)<{ isVisible: boolean }>`
 
 interface LectureIntroPageProps {
   introContent: LectureIntro;
-  isLast: boolean;
+  isLastPage: boolean;
   onNext: () => void;
 }
 
-function LectureIntroContainer({ introContent, isLast, onNext }: LectureIntroPageProps) {
+function LectureIntroContainer({ introContent, isLastPage, onNext }: LectureIntroPageProps) {
   const [isToastVisible, setIsToastVisible] = useState(false);
   const [isStartButtonVisible, setIsStartButtonVisible] = useState(false);
   const timeoutIdRef = useRef<NodeJS.Timeout>();
 
   const handleTouch = () => {
     setIsToastVisible(false);
+    setIsStartButtonVisible(false);
     clearTimeout(timeoutIdRef.current);
     onNext();
   };
@@ -76,7 +77,7 @@ function LectureIntroContainer({ introContent, isLast, onNext }: LectureIntroPag
 
     return () => {
       removeAudio(audio);
-      setIsStartButtonVisible(isLast);
+      setIsStartButtonVisible(isLastPage);
       clearTimeout(timeoutIdRef.current);
     };
   });
@@ -84,8 +85,8 @@ function LectureIntroContainer({ introContent, isLast, onNext }: LectureIntroPag
   return (
     <StyledLectureIntroPage onClick={handleTouch}>
       <AnimationView params={{ src: introContent.image, autoplay: true }} size={{ width: 886, height: 626 }} />
-      {!isLast && <Toast message='화면을 터치하면 다음 페이지로 넘어가요' isVisible={isToastVisible} />}
-      {isLast && (
+      {!isLastPage && <Toast message='화면을 터치하면 다음 페이지로 넘어가요' isVisible={isToastVisible} />}
+      {isLastPage && (
         <StartButton isVisible={isStartButtonVisible} onClick={onNext}>
           시작하기
         </StartButton>
