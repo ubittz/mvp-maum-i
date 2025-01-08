@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 
 import styled from 'styled-components';
 
@@ -55,25 +55,18 @@ function InputFormGroup({ inputProps, buttonProps, theme = 'default', showDelete
         <TextField
           {...inputProps}
           theme={theme}
-          ref={inputRef} // input 요소에 ref 연결
+          ref={inputRef}
           onFocus={(e) => {
             setIsFocused(true);
-            if (inputProps.onFocus) inputProps.onFocus(e); // 기존 onFocus 호출
+            if (inputProps.onFocus) inputProps.onFocus(e);
           }}
           onBlur={(e) => {
             setIsFocused(false);
-            if (inputProps.onBlur) inputProps.onBlur(e); // 기존 onBlur 호출
+            if (inputProps.onBlur) inputProps.onBlur(e);
           }}
         />
         {buttonProps && <Button.Small {...buttonProps} />}
-        {showDeleteIcon && isFocused && (
-          <img
-            src={xCircleIcon}
-            alt='delete'
-            onClick={handleClear} // 값을 지우는 함수 호출
-            onMouseDown={(e) => e.preventDefault()}
-          />
-        )}
+        {showDeleteIcon && isFocused && <img src={xCircleIcon} alt='delete' onClick={handleClear} onMouseDown={(e) => e.preventDefault()} />}
       </Flex.Horizontal>
     </StyledInputFormGroup>
   );
