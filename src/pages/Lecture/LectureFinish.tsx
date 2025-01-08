@@ -20,7 +20,7 @@ import LectureFinishInteractionGraph from './parts/LectureFinishInteractionGraph
 const StyledLectureFinish = styled(FullScreen)`
   width: 100%;
   height: 100%;
-  padding: 32px 0;
+  padding: 24px 0;
   overflow-x: hidden;
   align-items: center;
 
@@ -29,13 +29,14 @@ const StyledLectureFinish = styled(FullScreen)`
     width: 100%;
     overflow-y: hidden;
     margin-bottom: 90px;
+
     .statistics__container {
       width: 607px;
       margin-top: 28px;
       background-color: ${COLORS.MUSTARD_500};
       border-radius: 12px;
       padding: 16px;
-
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
       .header {
         align-items: center;
         gap: 8px;

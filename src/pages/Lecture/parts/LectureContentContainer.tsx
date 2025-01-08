@@ -49,10 +49,10 @@ function LectureContentContainer({ content, isLastPage, onNext }: LectureContent
   const timeoutIdRef = useRef<NodeJS.Timeout>();
 
   const handleInteraction = () => {
+    onNext();
     setIsToastVisible(false);
     setIsBottomButtonVisible(false);
     clearTimeout(timeoutIdRef.current);
-    onNext();
   };
 
   useEffect(() => {

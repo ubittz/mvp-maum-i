@@ -9,7 +9,7 @@ const StyledStatisticRow = styled(Flex.Vertical)`
   border-radius: 12px;
   background-color: ${COLORS.GRAY_SCALE_000};
   height: 138px;
-
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   .title__container {
     align-self: flex-start;
     height: 32px;

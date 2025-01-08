@@ -10,6 +10,7 @@ const StyledLectureFinishGraphContainer = styled(Flex.Vertical)`
   background-color: ${COLORS.GRAY_SCALE_000};
   border-radius: 12px;
   padding: 16px 16px 22px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 
   .header {
     align-items: center;

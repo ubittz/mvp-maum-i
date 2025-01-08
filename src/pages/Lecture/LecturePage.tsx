@@ -15,7 +15,7 @@ const StyledLecturePage = styled(FullScreen)`
   width: 100%;
   height: 100%;
   align-items: center;
-  padding: 32px 0;
+  padding: 24px 0;
 `;
 
 function LecturePage() {

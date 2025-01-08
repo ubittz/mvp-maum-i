@@ -17,6 +17,7 @@ const StyledLectureReviewContainer = styled(Flex.Vertical)`
   margin: 48px 0 40px;
   background-color: ${COLORS.GRAY_SCALE_000};
   border-radius: 12px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 
   .header {
     width: 100%;
