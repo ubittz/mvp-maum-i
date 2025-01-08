@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+import { logoIcon } from '@@assets/icons';
 import Flex from '@@components/Flex';
 import Typography from '@@components/Typography';
 import { COLORS } from '@@constants/colors';
@@ -17,9 +18,11 @@ const StyledFooter = styled(Flex.Horizontal)`
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    .logo__text {
-      color: ${COLORS.GRAY_SCALE_600};
-      font-weight: 800;
+
+    & img {
+      width: 65px;
+      height: 25px;
+      margin-bottom: 2px;
     }
   }
 
@@ -39,8 +42,7 @@ function Footer() {
   return (
     <StyledFooter>
       <Flex.Horizontal className='left_container'>
-        {/* TODO: 로고 추가 */}
-        <Typography.Body1 className='logo__text'>마음아이</Typography.Body1>
+        <img src={logoIcon} alt='logo' />
       </Flex.Horizontal>
       <Flex.Horizontal className='right_container'>
         <Typography.Caption2>

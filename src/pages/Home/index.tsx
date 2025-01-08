@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Flex from '@@components/Flex';
@@ -8,6 +9,8 @@ import BannerContainer from '@@pages/Home/parts/BannerContainer';
 import CheckPurchaseContainer from '@@pages/Home/parts/CheckPurchaseContainer';
 import StudyStatusContainer from '@@pages/Home/parts/StudyStatusContainer';
 import VideoPlayerModal from '@@pages/Home/parts/VideoPlayerModal';
+import { PAGES } from '@@router/constants';
+import { pathGenerator } from '@@router/utils';
 
 const StyledHome = styled(FullScreen)`
   .content {
@@ -25,10 +28,19 @@ const StyledHome = styled(FullScreen)`
 `;
 
 function Home() {
+  const navigate = useNavigate();
   const [isShowVideoModal, setIsShowVideoModal] = useState(false);
 
   const handleVideoModal = () => {
     setIsShowVideoModal(!isShowVideoModal);
+  };
+
+  const handlePlayVideo = () => {
+    console.log('play video');
+  };
+
+  const handleGoSubscribeProduct = () => {
+    navigate(pathGenerator(`${PAGES.LECTURE}/map`));
   };
 
   return (
@@ -40,7 +52,7 @@ function Home() {
           <BannerContainer />
         </Flex.Vertical>
       </Flex.Horizontal>
-      {isShowVideoModal && <VideoPlayerModal onClose={handleVideoModal} onPlay={handleVideoModal} onSubscribeProduct={handleVideoModal} />}
+      {isShowVideoModal && <VideoPlayerModal onClose={handleVideoModal} onPlay={handlePlayVideo} onSubscribeProduct={handleGoSubscribeProduct} />}
     </StyledHome>
   );
 }

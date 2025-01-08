@@ -47,13 +47,11 @@ const StyledPurchaseHistoryDetail = styled.div<{ isOpen: boolean }>`
 
     .content {
       gap: 11px;
+      width: 320px;
+      pointer-events: none;
 
       .title {
         color: ${COLORS.GRAY_SCALE_600};
-      }
-
-      .input {
-        width: 320px;
       }
     }
   }

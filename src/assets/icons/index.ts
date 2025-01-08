@@ -6,6 +6,7 @@ import downChevronIcon from './down_chevron.svg';
 import googleIcon from './google.svg';
 import kakaoIcon from './kakao.svg';
 import leftChevronIcon from './left_chevron.svg';
+import logoIcon from './logo.svg';
 import magnifyIcon from './magnify.svg';
 import naverIcon from './naver.svg';
 import questionMarkIcon from './questionMark.svg';
@@ -13,6 +14,7 @@ import xCircleIcon from './x_circle.svg';
 import xIcon from './x_icon.svg';
 
 export {
+  logoIcon,
   appleIcon,
   googleIcon,
   kakaoIcon,

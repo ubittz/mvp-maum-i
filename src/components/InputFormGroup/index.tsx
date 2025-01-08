@@ -33,9 +33,8 @@ const StyledInputFormGroup = styled(FormGroup)`
       right: 16px;
       top: 50%;
       transform: translateY(-50%);
-      z-index: 1;
+      z-index: 1000;
       cursor: pointer;
-      pointer-events: all;
     }
   }
 `;
@@ -45,13 +44,8 @@ function InputFormGroup({ inputProps, buttonProps, theme = 'default', showDelete
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   const handleClear = () => {
-    console.log('inputRef.current', inputRef.current);
     if (inputRef.current) {
-      console.log('inputRef.current', inputRef.current);
-      inputRef.current.value = ''; // 직접 값을 초기화
-      if (inputProps.onChange) {
-        inputProps.onChange({ target: inputRef.current } as React.ChangeEvent<HTMLInputElement>);
-      }
+      inputRef.current.value = '';
     }
   };
 
@@ -76,8 +70,8 @@ function InputFormGroup({ inputProps, buttonProps, theme = 'default', showDelete
           <img
             src={xCircleIcon}
             alt='delete'
-            draggable={false}
             onClick={handleClear} // 값을 지우는 함수 호출
+            onMouseDown={(e) => e.preventDefault()}
           />
         )}
       </Flex.Horizontal>
