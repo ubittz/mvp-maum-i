@@ -17,10 +17,10 @@ export default defineConfig(({ mode }) => {
         includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
         scope: env.VITE_APP_ROUTE_PREFIX,
         manifest: {
-          name: 'App Name',
-          short_name: 'App Name',
+          name: '마음아이',
+          short_name: '마음아이',
           theme_color: '#ffffff',
-          description: 'Ubittz MVP Web Template',
+          description: '마음아이',
           icons: [
             {
               src: 'pwa-64x64.png',
