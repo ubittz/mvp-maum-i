@@ -1,6 +1,6 @@
 {
   "files": [],
-  "include": ["src/**/*.(tsx|ts)", "src/custom.d.ts"],
+  "include": ["src/**/*.(tsx|ts)"],
   "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }],
   "compilerOptions": {
     "strict": true,
