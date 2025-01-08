@@ -16,6 +16,7 @@ const StyledMessageAlert = styled.div<{ isVisible: boolean }>`
   background-color: ${COLORS.GRAY_SCALE_000};
   gap: 8px;
   padding: 20px 16px;
+  transition: opacity 0.5s ease-in-out;
   opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
 
   .header__container {

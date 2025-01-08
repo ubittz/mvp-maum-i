@@ -12,7 +12,7 @@ export interface Statistics {
 }
 
 export interface Review {
-  id: number;
+  id: string;
   score: number;
   content: string;
   createdAt: string;

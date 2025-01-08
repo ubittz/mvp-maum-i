@@ -18,7 +18,7 @@ const StyledLectureContentContainer = styled.div<{ isBottomButtonVisible: boolea
   align-items: center;
   cursor: pointer;
 
-  .normal_image {
+  & img {
     width: 886px;
     height: 626px;
     cursor: pointer;
@@ -50,6 +50,7 @@ function LectureContentContainer({ content, isLastPage, onNext }: LectureContent
 
   const handleInteraction = () => {
     setIsToastVisible(false);
+    setIsBottomButtonVisible(false);
     clearTimeout(timeoutIdRef.current);
     onNext();
   };
@@ -68,8 +69,8 @@ function LectureContentContainer({ content, isLastPage, onNext }: LectureContent
     }, audio.duration + 3000);
 
     return () => {
-      // audio.pause();
-      // audio.currentTime = 0;
+      audio.pause();
+      audio.currentTime = 0;
       clearTimeout(timeoutIdRef.current);
     };
   });
@@ -84,7 +85,7 @@ function LectureContentContainer({ content, isLastPage, onNext }: LectureContent
             maxTouchCount={content.touchCount}
           />
         ) : content.isNormalImage ? (
-          <img className='normal_image' src={content.image} alt='lecture content' onClick={handleInteraction} />
+          <img src={content.image} alt='lecture content' onClick={handleInteraction} />
         ) : (
           <AnimationView params={{ src: content.image, autoplay: true }} size={{ width: 886, height: 626 }} />
         )}

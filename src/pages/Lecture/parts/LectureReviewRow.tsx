@@ -23,7 +23,7 @@ const StyledLectureReviewRow = styled(Flex.Vertical)`
       justify-content: space-between;
       gap: 4px;
       .id__text {
-        color: ${COLORS.GRAY_SCALE_400};
+        color: ${COLORS.GRAY_SCALE_800};
       }
       .created__at__text {
         color: ${COLORS.GRAY_SCALE_400};
@@ -50,24 +50,30 @@ interface LectureReviewRowProps {
 }
 
 function LectureReviewRow({ review }: LectureReviewRowProps) {
+  const maskId = (id: string) => {
+    if (id.length < 4) return id; // ID가 4글자 미만일 경우 마스킹하지 않음
+    if (id.length === 5) return id[0] + '**' + id.slice(4); // 5글자일 경우 2, 3번째 글자만 *로 대체
+    return id[0] + '***' + id.slice(4); // 6글자 이상일 경우 2, 3, 4번째 글자를 *로 대체
+  };
+
   return (
     <StyledLectureReviewRow>
       <Flex.Vertical className='header'>
         <Flex.Horizontal className='text__container'>
-          <Typography.Subtitle3 className='id__text'>{review.id}</Typography.Subtitle3>
-          <Typography.Caption2 className='created__at__text'>{review.createdAt}</Typography.Caption2>
+          <Typography.Subtitle3 className='id__text'>{maskId(review.id)}</Typography.Subtitle3>
+          <Typography.Caption2 className='created__at__text'>{review.createdAt.split('T')[0]}</Typography.Caption2>
         </Flex.Horizontal>
         <Flex.Horizontal className='score__container'>
-          {Array.from({ length: 5 }).map((_, index) => (
-            <StarIcon key={index} fill={index <= review.score - 1} />
-          ))}
+          {Array.from({ length: 5 }).map((_, index) => {
+            const isFullStar = index < Math.floor(review.score); // 정수 부분
+            const isHalfStar = index === Math.floor(review.score) && review.score % 1 >= 0.3; // 반쪽 별
+
+            return <StarIcon key={index} fill={isFullStar} halfFill={isHalfStar} />;
+          })}
         </Flex.Horizontal>
       </Flex.Vertical>
       <Flex.Vertical className='content'>
-        <Typography.Body3>
-          우리 아이가 예전엔 화가 나거나 속상할 때 어떻게 표현해야 할지 몰랐는데, 이 프로그램을 통해 자신의 감정을 말로 잘 표현하기 시작했어요. 정말
-          고마운 서비스예요!
-        </Typography.Body3>
+        <Typography.Body3>{review.content}</Typography.Body3>
       </Flex.Vertical>
     </StyledLectureReviewRow>
   );

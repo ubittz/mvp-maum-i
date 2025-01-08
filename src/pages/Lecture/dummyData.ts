@@ -15,27 +15,48 @@ import { Lecture, Step, Review } from './types';
 
 const dummyReviews: Review[] = [
   {
-    id: 1,
-    content: '리뷰 1',
+    id: 'a12323',
+    content:
+      '우리 아이가 예전엔 화가 나거나 속상할 때 어떻게 표현해야 할지 몰랐는데, 이 프로그램을 통해 자신의 감정을 말로 잘 표현하기 시작했어요. 정말 고마운 서비스예요!',
     score: 4,
-    createdAt: '2024-01-01',
+    createdAt: '2024-05-28',
   },
   {
-    id: 2,
-    content: '리뷰 2',
+    id: 'b123dd',
+    content: '다양한 감정에 대해 배우면서 아이가 친구나 가족의 감정을 더 잘 이해하고 공감하는 모습을 보여요. 이런 변화가 너무 기쁩니다.',
     score: 3,
-    createdAt: '2024-01-01',
+    createdAt: '2024-05-20',
   },
   {
-    id: 3,
-    content: '리뷰 3',
+    id: 'e123ww',
+    content: '이 서비스를 시작한 후 아이가 짜증이 나거나 화가 났을 때도 스스로 감정을 조절하려고 노력하는 모습이 보여요. 너무 놀라웠습니다.',
     score: 5,
-    createdAt: '2024-01-01',
+    createdAt: '2024-05-16',
   },
   {
-    id: 4,
-    content: '리뷰 4',
-    score: 2,
+    id: 'f123et',
+    content: '애니메이션과 놀이를 통해 감정을 배우니까 아이가 지루해하지 않고 재미있게 배워요. 교육 서비스라기보다 놀이 같아서 더욱 좋아요.',
+    score: 5,
+    createdAt: '2024-05-16',
+  },
+  {
+    id: 'd123hbg',
+    content:
+      '아이와 함께 참여하면서 저도 감정에 대해 새롭게 배우는 기회가 됐어요. 아이와 대화할 때 훨씬 이해하기 쉬운 언어로 말할 수 있게 된 것 같아요.',
+    score: 4.6,
+    createdAt: '2024-05-16',
+  },
+  {
+    id: 'a123hs',
+    content: `선생님께서 아이가 친구들과 잘 지내고 감정을 잘 표현한다고 칭찬하시더라고요. 
+이 서비스 덕분인 것 같아 뿌듯합니다.`,
+    score: 5,
+    createdAt: '2024-01-08',
+  },
+  {
+    id: 'c123gw',
+    content: '자신의 감정을 이해하고 표현하는 법을 배우면서 아이가 자신감을 갖기 시작했어요. 이제는 발표도 잘하고, 친구들과도 더 즐겁게 어울립니다.',
+    score: 5,
     createdAt: '2024-01-01',
   },
 ];
@@ -45,7 +66,7 @@ export const dummyLectures: Lecture[] = [
     id: 1,
     stepTitle: 'Step 1',
     title: '1. 다양한 감정',
-    summary: '첫 번째, 감정의 이야기 "다양한 감정"',
+    summary: `첫 번째, 감정의 이야기 '다양한 감정'`,
     description: 'Description for Lecture 1-1',
     intro: [
       {
@@ -164,7 +185,7 @@ export const dummyLectures: Lecture[] = [
     id: 2,
     stepTitle: 'Step 1',
     title: '2. 심리적 경계',
-    summary: '두 번째, 감정의 이야기 "심리적 경계"',
+    summary: `두 번째, 감정의 이야기 '심리적 경계'`,
     description: 'Description for Lecture 1-2',
     statistics: {
       interaction: 4,
@@ -202,7 +223,7 @@ export const dummyLectures: Lecture[] = [
     id: 3,
     stepTitle: 'Step 1',
     title: '3. 감정 인식',
-    summary: '세 번째, 감정의 이야기 "감정 인식"',
+    summary: `세 번째, 감정의 이야기 '감정 인식'`,
     description: 'Description for Lecture 1-3',
     statistics: {
       interaction: 3,
@@ -234,13 +255,13 @@ export const dummyLectures: Lecture[] = [
         empathy: 85,
       },
     },
-    reviews: [],
+    reviews: dummyReviews,
   },
   {
     id: 4,
     stepTitle: 'Step 1',
     title: '4. 감정 표현',
-    summary: '네 번째, 감정의 이야기 "감정 표현"',
+    summary: `네 번째, 감정의 이야기 '감정 표현'`,
     description: 'Description for Lecture 1-4',
     statistics: {
       interaction: 2,
@@ -272,13 +293,13 @@ export const dummyLectures: Lecture[] = [
         empathy: 85,
       },
     },
-    reviews: [],
+    reviews: dummyReviews,
   },
   {
     id: 5,
     stepTitle: 'Step 1',
     title: '5. 감정 이해',
-    summary: '다섯 번째, 감정의 이야기 "감정 이해"',
+    summary: `다섯 번째, 감정의 이야기 '감정 이해'`,
     description: 'Description for Lecture 1-5',
     statistics: {
       interaction: 1,
@@ -310,13 +331,13 @@ export const dummyLectures: Lecture[] = [
         empathy: 85,
       },
     },
-    reviews: [],
+    reviews: dummyReviews,
   },
   {
     id: 6,
     stepTitle: 'Step 1',
     title: '6. 감정 관리',
-    summary: '여섯 번째, 감정의 이야기 "감정 관리"',
+    summary: `여섯 번째, 감정의 이야기 '감정 관리'`,
     description: 'Description for Lecture 1-6',
     statistics: {
       interaction: 0,
@@ -348,7 +369,7 @@ export const dummyLectures: Lecture[] = [
         empathy: 85,
       },
     },
-    reviews: [],
+    reviews: dummyReviews,
   },
 ];
 
@@ -361,12 +382,12 @@ const dummySteps: Step[] = [
   {
     id: 2,
     title: 'Step 2',
-    lectures: [],
+    lectures: dummyLectures,
   },
   {
     id: 3,
     title: 'Step 3',
-    lectures: [],
+    lectures: dummyLectures,
   },
 ];
 

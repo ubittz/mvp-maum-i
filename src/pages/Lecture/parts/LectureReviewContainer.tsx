@@ -96,12 +96,12 @@ interface LectureReviewContainerProps {
 
 function LectureReviewContainer({ lecture }: LectureReviewContainerProps) {
   const [showAll, setShowAll] = useState(false);
+  const averageScore = lecture.reviews.reduce((acc, review) => acc + review.score, 0) / lecture.reviews.length;
+  const reviewsToShow = showAll ? lecture.reviews : lecture.reviews.slice(0, 3);
 
   const handleShowMore = () => {
     setShowAll(true);
   };
-
-  const reviewsToShow = showAll ? lecture.reviews : lecture.reviews.slice(0, 3);
 
   return (
     <StyledLectureReviewContainer>
@@ -118,20 +118,21 @@ function LectureReviewContainer({ lecture }: LectureReviewContainerProps) {
             추천순
           </Button.Xlarge>
           <Flex.Vertical className='summary__container'>
-            <Typography.Title3 className='average__score'>
-              {lecture.reviews.reduce((acc, review) => acc + review.score, 0) / lecture.reviews.length}
-            </Typography.Title3>
+            <Typography.Title3 className='average__score'>{lecture.reviews.length > 0 ? averageScore.toFixed(1) : '0.0'}</Typography.Title3>
             <Flex.Horizontal>
-              {Array.from({ length: 5 }).map((_, index) => (
-                <StarIcon key={index} fill={index <= lecture.reviews.reduce((acc, review) => acc + review.score, 0) / lecture.reviews.length - 1} />
-              ))}
+              {Array.from({ length: 5 }).map((_, index) => {
+                const isFullStar = index < Math.floor(averageScore);
+                const isHalfStar = index === Math.floor(averageScore) && averageScore % 1 >= 0.3;
+
+                return <StarIcon key={index} fill={isFullStar} halfFill={isHalfStar} />;
+              })}
             </Flex.Horizontal>
             <Typography.Body3 className='review__count'>{`${lecture.reviews.length}개의 리뷰`}</Typography.Body3>
           </Flex.Vertical>
         </ReviewSummaryContainer>
       </Flex.Vertical>
       <Flex.Vertical className='body'>
-        {reviewsToShow.length > 0 && reviewsToShow.map((review) => <LectureReviewRow key={review.id} review={review} />)}
+        {reviewsToShow.length > 0 && reviewsToShow.map((review, index) => <LectureReviewRow key={index} review={review} />)}
       </Flex.Vertical>
       {lecture.reviews.length > 3 && !showAll && (
         <Flex.Vertical className='bottom__container'>

@@ -1,6 +1,5 @@
 import { SVGProps } from 'react';
 
-import { COLORS } from '@@constants/colors';
 import { DefaultIconProps } from '@@types/common';
 
 export const PlayButton = (props: SVGProps<SVGSVGElement>) => (
@@ -111,12 +110,22 @@ export const EmpathyIcon = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export function StarIcon({ fill, ...props }: { fill?: boolean } & Omit<DefaultIconProps, 'fill'>) {
+export function StarIcon({ fill, halfFill, ...props }: { fill?: boolean; halfFill?: boolean } & Omit<DefaultIconProps, 'fill' | 'half'>) {
   return (
-    <svg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg' {...props}>
+    <svg width='15' height='14' viewBox='0 0 15 14' fill='none' xmlns='http://www.w3.org/2000/svg' {...props}>
       <path
-        d='M7.99998 1.6001L9.97758 5.54962L14.4 6.18685L11.2 9.2594L11.9552 13.6001L7.99998 11.5496L4.04478 13.6001L4.79998 9.2594L1.59998 6.18685L6.02238 5.54962L7.99998 1.6001Z'
-        fill={fill ? '#FFB200' : COLORS.GRAY_SCALE_200}
+        d='M7.5 1.75L9.12225 5.10984L12.75 5.65192L10.125 8.26573L10.7445 11.9583L7.5 10.214L4.2555 11.9583L4.875 8.26573L2.25 5.65192L5.87775 5.10984L7.5 1.75Z'
+        fill={fill ? '#FFC133' : '#F1F2F3'}
+        stroke={fill ? '#FFC133' : '#F1F2F3'}
+        strokeWidth='1.5'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+      <path
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M1.5 5.65179C1.5 5.65181 1.5 5.65184 1.5 5.65187C1.50001 5.84822 1.57721 6.04038 1.72082 6.18339L4.07125 8.52378L3.51586 11.8342C3.4685 12.1165 3.58595 12.4012 3.81861 12.5679C4.05127 12.7347 4.35855 12.7545 4.61067 12.6189L7.5 11.0655V1C7.21219 1.00001 6.94977 1.16472 6.82463 1.4239L5.37478 4.42667L2.13918 4.91016C1.8588 4.95206 1.626 5.14847 1.5375 5.4178C1.51228 5.49456 1.5 5.57351 1.5 5.65179Z'
+        fill={halfFill || fill ? '#FFC133' : '#F1F2F3'}
       />
     </svg>
   );
