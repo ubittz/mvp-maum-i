@@ -1,14 +1,13 @@
-import intro1 from '@@assets/animations/01-01_표지.riv';
-import content1 from '@@assets/animations/1-1 1주 스토리보드-01.png';
-import content2 from '@@assets/animations/1-1 1주 스토리보드-02.png';
-import content3 from '@@assets/animations/1-1 1주 스토리보드-03.png';
-import content4 from '@@assets/animations/1-1 1주 스토리보드-04.png';
-import content5 from '@@assets/animations/1-1 1주 스토리보드-05.png';
-import content6 from '@@assets/animations/1-1 1주 스토리보드-06.png';
-import intro2 from '@@assets/animations/1-1_1주_스토리보드1.riv';
-// import content1 from '@@assets/animations/1-1_1주_스토리보드2.riv';
-import animationContent1 from '@@assets/animations/1-1_1주_감정단어1.riv';
-import touchableContent1 from '@@assets/animations/1-1_1주_감정단어2.riv';
+import animationContent1 from '@@assets/animations/animationContent1.riv';
+import content1 from '@@assets/animations/content1.png';
+import content2 from '@@assets/animations/content2.png';
+import content3 from '@@assets/animations/content3.png';
+import content4 from '@@assets/animations/content4.png';
+import content5 from '@@assets/animations/content5.png';
+import content6 from '@@assets/animations/content6.png';
+import intro1 from '@@assets/animations/intro1.riv';
+import intro2 from '@@assets/animations/intro2.riv';
+import touchableContent1 from '@@assets/animations/touchableContent1.riv';
 import { checkIcon, magnifyIcon, questionMarkIcon } from '@@assets/icons';
 
 import { Lecture, Step, Review } from './types';
