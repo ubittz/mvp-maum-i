@@ -51,8 +51,6 @@ interface AlertProps {
 }
 
 function Alert({ title, text, children, imageUrl }: AlertProps) {
-  const buttonCount = Number(!!children);
-
   return (
     <>
       <Overlay />
@@ -60,7 +58,7 @@ function Alert({ title, text, children, imageUrl }: AlertProps) {
         {imageUrl && <img src={imageUrl} alt='Alert' />}
         <Typography.Title2>{title}</Typography.Title2>
         <Typography.Body3 className='subtitle'>{text}</Typography.Body3>
-        {children && <ButtonContainer buttonCount={buttonCount}>{children}</ButtonContainer>}
+        {children && <ButtonContainer>{children}</ButtonContainer>}
       </StyledAlert>
     </>
   );
