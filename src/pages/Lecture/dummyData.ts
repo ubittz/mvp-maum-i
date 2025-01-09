@@ -7,7 +7,16 @@ import content5 from '@@assets/animations/content5.png';
 import content6 from '@@assets/animations/content6.png';
 import intro1 from '@@assets/animations/intro1.riv';
 import intro2 from '@@assets/animations/intro2.riv';
-import touchableContent1 from '@@assets/animations/touchableContent1.riv';
+import lastContent1 from '@@assets/animations/newContent1.riv';
+import lastContent2 from '@@assets/animations/newContent2.riv';
+import lastContent3 from '@@assets/animations/newContent3.riv';
+import lastContent4 from '@@assets/animations/newContent4.riv';
+// import secondContent1 from '@@assets/animations/secondContent1.riv';
+// import secondContent2 from '@@assets/animations/secondContent2.riv';
+// import secondContent3 from '@@assets/animations/secondContent3.riv';
+// import secondContent4 from '@@assets/animations/secondContent4.riv';
+// import secondContent5 from '@@assets/animations/secondContent5.riv';
+// import secondContent6 from '@@assets/animations/secondContent6.riv';
 import { checkIcon, magnifyIcon, questionMarkIcon } from '@@assets/icons';
 
 import { Lecture, Step, Review } from './types';
@@ -131,16 +140,24 @@ export const dummyLectures: Lecture[] = [
         },
       },
       {
-        image: touchableContent1,
-        isTouchable: true,
-        touchCount: 4,
-        animation: ['Timeline 4', 'Timeline 1', 'Timeline 2', 'Timeline 3'],
+        image: lastContent1,
+        isTouchable: false,
       },
       {
-        image: touchableContent1,
-        isTouchable: true,
-        touchCount: 4,
-        animation: ['Timeline 3'],
+        image: lastContent2,
+        isTouchable: false,
+      },
+      {
+        image: lastContent3,
+        isTouchable: false,
+      },
+      {
+        image: lastContent4,
+        isTouchable: false,
+      },
+      {
+        image: lastContent4,
+        isTouchable: false,
         lastMessage: {
           title: '생각해보기',
           content: '나는 요즘에 무엇이 궁금해요? ',
