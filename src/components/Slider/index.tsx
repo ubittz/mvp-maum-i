@@ -37,7 +37,7 @@ function Slider({ items, gap = 0, itemSize, sliderProps, ...props }: SliderProps
         <StyledSlick
           gap={gap ?? 0}
           dots={false}
-          infinite={false}
+          infinite={true}
           arrows={false}
           {...sliderProps}
           beforeChange={(currentIndex, nextIndex) => {

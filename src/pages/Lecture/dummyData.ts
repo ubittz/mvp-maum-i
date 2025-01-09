@@ -15,7 +15,7 @@ import lastContent4 from '@@assets/animations/newContent4.riv';
 // import secondContent2 from '@@assets/animations/secondContent2.riv';
 // import secondContent3 from '@@assets/animations/secondContent3.riv';
 // import secondContent4 from '@@assets/animations/secondContent4.riv';
-// import secondContent5 from '@@assets/animations/secondContent5.riv';
+// import secondContent5 from '@@assets/animations/secondContent  5.riv';
 // import secondContent6 from '@@assets/animations/secondContent6.riv';
 import { checkIcon, magnifyIcon, questionMarkIcon } from '@@assets/icons';
 
@@ -69,6 +69,97 @@ const dummyReviews: Review[] = [
   },
 ];
 
+const dummyIntros = [
+  {
+    image: intro1,
+  },
+  {
+    image: intro2,
+  },
+];
+
+const dummyContents = [
+  {
+    image: content1,
+    isNormalImage: true,
+    isTouchable: false,
+  },
+  {
+    image: content2,
+    isNormalImage: true,
+    isTouchable: false,
+  },
+  {
+    image: content3,
+    isNormalImage: true,
+    isTouchable: false,
+  },
+  {
+    image: content4,
+    isNormalImage: true,
+    isTouchable: false,
+  },
+  {
+    image: content5,
+    isNormalImage: true,
+    isTouchable: false,
+  },
+  {
+    image: content6,
+    isNormalImage: true,
+    isTouchable: false,
+  },
+  {
+    image: content6,
+    isNormalImage: true,
+    isTouchable: false,
+    lastMessage: {
+      title: '한 줄 문구',
+      content: '우리도 마음속 다양한 감정을 만나러 출발해 볼까요?',
+      icon: checkIcon,
+    },
+  },
+  {
+    image: animationContent1,
+    isTouchable: false,
+  },
+  {
+    image: animationContent1,
+    isTouchable: false,
+    lastMessage: {
+      title: '알아보기',
+      icon: magnifyIcon,
+      content: `우리는 어떨 때 ‘아, 궁금해’라는 마음이 들까요?
+        먼저 공감이는 무엇이 궁금한지 알아보기로 해요.`,
+    },
+  },
+  {
+    image: lastContent1,
+    isTouchable: false,
+  },
+  {
+    image: lastContent2,
+    isTouchable: false,
+  },
+  {
+    image: lastContent3,
+    isTouchable: false,
+  },
+  {
+    image: lastContent4,
+    isTouchable: false,
+  },
+  {
+    image: lastContent4,
+    isTouchable: false,
+    lastMessage: {
+      title: '생각해보기',
+      content: '나는 요즘에 무엇이 궁금해요? ',
+      icon: questionMarkIcon,
+    },
+  },
+];
+
 export const dummyLectures: Lecture[] = [
   {
     id: 1,
@@ -76,95 +167,8 @@ export const dummyLectures: Lecture[] = [
     title: '1. 다양한 감정',
     summary: `첫 번째, 감정의 이야기 '다양한 감정'`,
     description: 'Description for Lecture 1-1',
-    intro: [
-      {
-        image: intro1,
-      },
-      {
-        image: intro2,
-      },
-    ],
-    content: [
-      {
-        image: content1,
-        isNormalImage: true,
-        isTouchable: false,
-      },
-      {
-        image: content2,
-        isNormalImage: true,
-        isTouchable: false,
-      },
-      {
-        image: content3,
-        isNormalImage: true,
-        isTouchable: false,
-      },
-      {
-        image: content4,
-        isNormalImage: true,
-        isTouchable: false,
-      },
-      {
-        image: content5,
-        isNormalImage: true,
-        isTouchable: false,
-      },
-      {
-        image: content6,
-        isNormalImage: true,
-        isTouchable: false,
-      },
-      {
-        image: content6,
-        isNormalImage: true,
-        isTouchable: false,
-        lastMessage: {
-          title: '한 줄 문구',
-          content: '우리도 마음속 다양한 감정을 만나러 출발해 볼까요?',
-          icon: checkIcon,
-        },
-      },
-      {
-        image: animationContent1,
-        isTouchable: false,
-      },
-      {
-        image: animationContent1,
-        isTouchable: false,
-        lastMessage: {
-          title: '알아보기',
-          icon: magnifyIcon,
-          content: `우리는 어떨 때 ‘아, 궁금해’라는 마음이 들까요?
-          먼저 공감이는 무엇이 궁금한지 알아보기로 해요.`,
-        },
-      },
-      {
-        image: lastContent1,
-        isTouchable: false,
-      },
-      {
-        image: lastContent2,
-        isTouchable: false,
-      },
-      {
-        image: lastContent3,
-        isTouchable: false,
-      },
-      {
-        image: lastContent4,
-        isTouchable: false,
-      },
-      {
-        image: lastContent4,
-        isTouchable: false,
-        lastMessage: {
-          title: '생각해보기',
-          content: '나는 요즘에 무엇이 궁금해요? ',
-          icon: questionMarkIcon,
-        },
-      },
-    ],
+    intro: dummyIntros,
+    content: dummyContents,
     statistics: {
       interaction: 28,
       childStatistics: {
@@ -203,6 +207,8 @@ export const dummyLectures: Lecture[] = [
     title: '2. 심리적 경계',
     summary: `두 번째, 감정의 이야기 '심리적 경계'`,
     description: 'Description for Lecture 1-2',
+    intro: dummyIntros,
+    content: dummyContents,
     statistics: {
       interaction: 4,
       childStatistics: {
@@ -241,6 +247,8 @@ export const dummyLectures: Lecture[] = [
     title: '3. 감정 인식',
     summary: `세 번째, 감정의 이야기 '감정 인식'`,
     description: 'Description for Lecture 1-3',
+    intro: dummyIntros,
+    content: dummyContents,
     statistics: {
       interaction: 3,
       childStatistics: {
@@ -279,6 +287,8 @@ export const dummyLectures: Lecture[] = [
     title: '4. 감정 표현',
     summary: `네 번째, 감정의 이야기 '감정 표현'`,
     description: 'Description for Lecture 1-4',
+    intro: dummyIntros,
+    content: dummyContents,
     statistics: {
       interaction: 2,
       childStatistics: {
@@ -317,6 +327,8 @@ export const dummyLectures: Lecture[] = [
     title: '5. 감정 이해',
     summary: `다섯 번째, 감정의 이야기 '감정 이해'`,
     description: 'Description for Lecture 1-5',
+    intro: dummyIntros,
+    content: dummyContents,
     statistics: {
       interaction: 1,
       childStatistics: {
@@ -355,6 +367,8 @@ export const dummyLectures: Lecture[] = [
     title: '6. 감정 관리',
     summary: `여섯 번째, 감정의 이야기 '감정 관리'`,
     description: 'Description for Lecture 1-6',
+    intro: dummyIntros,
+    content: dummyContents,
     statistics: {
       interaction: 0,
       childStatistics: {
