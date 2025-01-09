@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "app.netlify.thegonggam.twa",
+        "sha256_cert_fingerprints": ["22:DA:16:EE:51:1B:38:A3:56:24:72:38:94:B2:83:DB:41:E8:57:E1:40:72:B6:AA:B9:46:E2:2E:3F:93:89:CA"]
+      }
+    }]
