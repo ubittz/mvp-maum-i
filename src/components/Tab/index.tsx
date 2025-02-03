@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 import Flex from '@@components/Flex';
-
-import TabHeader from './TabHeader';
+import TabHeader from '@@components/Tab/TabHeader';
 
 interface TabItem {
   label: string;

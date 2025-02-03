@@ -32,6 +32,7 @@ const StyledStepDetailGridContainer = styled.div`
   z-index: 1000;
   overflow-y: auto;
   overflow-x: hidden;
+  scrollbar-width: none;
 `;
 
 const StyledStepDetailGrid = styled(Flex.Vertical)`
@@ -43,6 +44,7 @@ const StyledStepDetailGrid = styled(Flex.Vertical)`
   gap: 14px;
   padding: 0 17px 16px;
   overflow-y: auto;
+  scrollbar-width: none;
   .row {
     gap: 14px;
   }
@@ -57,7 +59,6 @@ function StepDetailGrid({ step, handleBack }: StepDetailGridProps) {
   const [isLectureSelected, setIsLectureSelected] = useState<Lecture | undefined>(undefined);
 
   const handleLecturePopupOpen = (lecture: Lecture) => {
-    // StyledStepDetailGridContainer y 스크롤 맨 위로 올라가야함
     setIsLectureSelected(lecture);
   };
 

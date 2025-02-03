@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { OverlayProps } from '@@components/Overlay/types';
+
 const StyledOverlay = styled.div<{ isVisible: boolean }>`
   display: ${({ isVisible }) => (isVisible ? 'block' : 'none')};
   position: absolute;
@@ -11,12 +13,8 @@ const StyledOverlay = styled.div<{ isVisible: boolean }>`
   z-index: 10; // 다른 요소 위에 표시
 `;
 
-interface OverlayProps {
-  isVisible: boolean;
-}
-
-function Overlay({ isVisible }: OverlayProps) {
-  return <StyledOverlay isVisible={isVisible} />;
+function Overlay({ isVisible, onClick }: OverlayProps) {
+  return <StyledOverlay isVisible={isVisible} onClick={onClick} />;
 }
 
 export default Overlay;

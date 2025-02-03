@@ -25,6 +25,7 @@ const StyledLectureDetail = styled(Flex.Vertical)`
     padding: 20px 16px;
     gap: 8px;
     align-items: flex-start;
+    background-color: ${COLORS.MAIN_100};
 
     .title__step {
       color: ${COLORS.GRAY_SCALE_400};
@@ -35,12 +36,11 @@ const StyledLectureDetail = styled(Flex.Vertical)`
       font-weight: 800;
     }
   }
+`;
 
-  .tab_container {
-    flex: 1;
-    margin: 0 16px;
-    gap: 32px;
-  }
+const ContentWrapper = styled.div`
+  flex: 1;
+  overflow-y: auto;
 `;
 
 interface LectureDetailProps {
@@ -52,16 +52,17 @@ function LectureDetail({ lecture }: LectureDetailProps) {
 
   const handleTabChange = (index: number) => {
     setSelectedTabIndex(index);
-    console.log(index);
   };
 
   return (
     <StyledLectureDetail>
-      {lecture.thumbnail ? <img src={lecture.thumbnail} alt={lecture.title} className='img' /> : <LectureThumbnail className='img' />}
-      <Flex.Vertical className='title_container'>
-        <Typography.Button2 className='title__step'>[{lecture.stepTitle}]</Typography.Button2>
-        <Typography.Title5 className='title__summary'>{lecture.summary}</Typography.Title5>
-      </Flex.Vertical>
+      <ContentWrapper>
+        {lecture.thumbnail ? <img src={lecture.thumbnail} alt={lecture.title} className='img' /> : <LectureThumbnail className='img' />}
+        <Flex.Vertical className='title_container'>
+          <Typography.Button2 className='title__step'>[{lecture.stepTitle}]</Typography.Button2>
+          <Typography.Title5 className='title__summary'>{lecture.summary}</Typography.Title5>
+        </Flex.Vertical>
+      </ContentWrapper>
       <Tab
         itemList={[
           {

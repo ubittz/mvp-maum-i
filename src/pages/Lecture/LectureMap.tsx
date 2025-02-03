@@ -83,7 +83,7 @@ function LectureMap() {
             Step 3
           </Button.Large>
         </StyledLectureMapImage>
-        <Overlay isVisible={selectedStep !== null} />
+        <Overlay isVisible={selectedStep !== null} onClick={handleStepDetailBack} />
         {selectedStep && <StepDetailGrid step={selectedStep} handleBack={handleStepDetailBack} />}
       </LectureContainer>
     </StyledLectureMap>

@@ -128,7 +128,7 @@ function PurchaseHistory() {
           </Button.Xlarge>
         </Flex.Vertical>
       </MyPageContainer>
-      <Overlay isVisible={isDetailOpen} />
+      <Overlay isVisible={isDetailOpen} onClick={handleCloseDetail} />
       {isDetailOpen && <PurchaseHistoryDetail handleBack={handleCloseDetail} isOpen={isDetailOpen} />}
     </StyledPurchaseHistory>
   );

@@ -8,8 +8,8 @@ import { Lecture } from '@@pages/Lecture/types';
 import { PAGES } from '@@router/constants';
 import { pathGenerator } from '@@router/utils';
 
-import LectureContainer from './LectureContainer';
 import LectureDetail from './LectureDetail';
+import LectureDetailContainer from './LectureDetailContainer';
 
 const slideIn = keyframes`
   from {
@@ -43,6 +43,11 @@ const StyledLectureDetailPopup = styled.div<{ isOpen: boolean }>`
   background-color: ${COLORS.MAIN_100};
   z-index: 1000;
   overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   .bottom__button_container {
     position: relative;
@@ -73,14 +78,14 @@ function LectureDetailPopup({ lecture, handleBack, isOpen }: LectureDetailPopupP
 
   return (
     <StyledLectureDetailPopup isOpen={isOpen}>
-      <LectureContainer title={lecture.title} padding='0px' onBack={handleBack} isHeaderSticky>
+      <LectureDetailContainer title={lecture.title} padding='0px' onBack={handleBack}>
         <LectureDetail lecture={lecture} />
         <Flex.Vertical className='bottom__button_container'>
           <Button.Xlarge className='button' onClick={handleStartLecture}>
             시작하기
           </Button.Xlarge>
         </Flex.Vertical>
-      </LectureContainer>
+      </LectureDetailContainer>
     </StyledLectureDetailPopup>
   );
 }

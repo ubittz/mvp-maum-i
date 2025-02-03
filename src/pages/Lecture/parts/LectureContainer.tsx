@@ -29,7 +29,7 @@ const ContainerHeader = styled(Flex.Horizontal)<{ padding?: string; isSticky?: b
   .button_left {
     width: 24px;
     height: 24px;
-    left: 33px;
+    left: 16px;
     position: absolute;
   }
 `;
