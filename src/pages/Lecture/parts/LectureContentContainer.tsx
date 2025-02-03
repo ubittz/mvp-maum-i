@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 import styled from 'styled-components';
 
@@ -47,6 +47,7 @@ function LectureContentContainer({ content, isLastPage, onNext }: LectureContent
   const [isBottomButtonVisible, setIsBottomButtonVisible] = useState(false);
   const [isLastMessageVisible, setIsLastMessageVisible] = useState(false);
   const [isAudioEnded, setIsAudioEnded] = useState(false);
+  const hasShownMessage = useRef(false);
 
   const handleInteraction = () => {
     if (!isAudioEnded) return;
@@ -61,20 +62,35 @@ function LectureContentContainer({ content, isLastPage, onNext }: LectureContent
     setIsAudioEnded(true);
     setIsToastVisible(true);
     setIsBottomButtonVisible(true);
-    setIsLastMessageVisible(true);
   };
 
   useEffect(() => {
     const audio = new Audio(content.audio);
+    hasShownMessage.current = false;
+
     audio.loop = false;
     audio.play();
     audio.onended = handleAudioEnd;
     setIsAudioEnded(false);
+    setIsLastMessageVisible(false);
+    setIsBottomButtonVisible(false);
+    setIsToastVisible(false);
+
+    const handleTimeUpdate = () => {
+      const timeRemaining = audio.duration - audio.currentTime;
+      if (timeRemaining <= 5 && content.lastMessage && !hasShownMessage.current) {
+        hasShownMessage.current = true;
+        setIsLastMessageVisible(true);
+      }
+    };
+
+    audio.addEventListener('timeupdate', handleTimeUpdate);
 
     return () => {
+      audio.removeEventListener('timeupdate', handleTimeUpdate);
       audio.pause();
     };
-  }, [content.audio]);
+  }, [content]);
 
   return (
     <>

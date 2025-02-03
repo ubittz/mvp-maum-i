@@ -12,7 +12,6 @@ import lastContent2 from '@@assets/animations/newContent2.riv';
 import lastContent3 from '@@assets/animations/newContent3.riv';
 import lastContent4 from '@@assets/animations/newContent4.riv';
 import animationContentAudio1 from '@@assets/audios/animationContent1_audio.mp4';
-import animationContentMessageAudio1 from '@@assets/audios/animationContent1_messageAudio.mp4';
 import contentAudio1 from '@@assets/audios/content1_audio.mp4';
 import contentAudio2 from '@@assets/audios/content2_audio.mp4';
 import contentAudio3 from '@@assets/audios/content3_audio.mp4';
@@ -136,11 +135,6 @@ const dummyContents = [
     image: animationContent1,
     audio: animationContentAudio1,
     isTouchable: false,
-  },
-  {
-    image: animationContent1,
-    isTouchable: false,
-    audio: animationContentMessageAudio1,
     lastMessage: {
       title: '알아보기',
       icon: magnifyIcon,
