@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 
 import styled from 'styled-components';
 
@@ -42,45 +42,34 @@ interface LectureIntroPageProps {
 function LectureIntroContainer({ introContent, isLastPage, onNext }: LectureIntroPageProps) {
   const [isToastVisible, setIsToastVisible] = useState(false);
   const [isStartButtonVisible, setIsStartButtonVisible] = useState(false);
-  const timeoutIdRef = useRef<NodeJS.Timeout>();
+  const [isAudioEnded, setIsAudioEnded] = useState(false);
 
   const handleTouch = () => {
+    if (!isAudioEnded) return;
+
     setIsToastVisible(false);
     setIsStartButtonVisible(false);
-    clearTimeout(timeoutIdRef.current);
     onNext();
   };
 
-  const setAudio = () => {
-    const audio = new Audio(introContent.audio);
-    audio.loop = true;
-    audio.play();
-    audio.onended = handleAudioEnd;
-    return audio;
-  };
-
   const handleAudioEnd = () => {
+    setIsAudioEnded(true);
     setIsStartButtonVisible(true);
-  };
-
-  const removeAudio = (audio: HTMLAudioElement) => {
-    audio.pause();
-    audio.currentTime = 0;
+    setIsToastVisible(true);
   };
 
   useEffect(() => {
-    const audio = setAudio();
-
-    timeoutIdRef.current = setTimeout(() => {
-      setIsToastVisible(true);
-    }, 3000);
+    const audio = new Audio(introContent.audio);
+    audio.loop = false;
+    audio.play();
+    audio.onended = handleAudioEnd;
+    setIsAudioEnded(false);
 
     return () => {
-      removeAudio(audio);
+      audio.pause();
       setIsStartButtonVisible(isLastPage);
-      clearTimeout(timeoutIdRef.current);
     };
-  });
+  }, [introContent.audio, isLastPage]);
 
   return (
     <StyledLectureIntroPage onClick={handleTouch}>

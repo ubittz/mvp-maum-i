@@ -27,7 +27,7 @@ function LecturePage() {
   const [touchCount, setTouchCount] = useState(0);
 
   const handleNext = () => {
-    if (touchCount > (lecture?.content?.[currentPage]?.animation?.length || 0)) {
+    if (touchCount >= (lecture?.content?.[currentPage]?.animation?.length || 0)) {
       handleNextPage();
     } else {
       setTouchCount(touchCount + 1);

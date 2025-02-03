@@ -32,6 +32,7 @@ interface LectureMessage {
 export interface LectureContent {
   image?: string;
   text?: string;
+  audio?: string;
   isNormalImage?: boolean;
   isTouchable?: boolean;
   touchCount?: number;

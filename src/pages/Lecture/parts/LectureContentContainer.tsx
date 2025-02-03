@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 
 import styled from 'styled-components';
 
@@ -45,35 +45,36 @@ interface LectureContentContainerProps {
 function LectureContentContainer({ content, isLastPage, onNext }: LectureContentContainerProps) {
   const [isToastVisible, setIsToastVisible] = useState(false);
   const [isBottomButtonVisible, setIsBottomButtonVisible] = useState(false);
-
-  const timeoutIdRef = useRef<NodeJS.Timeout>();
+  const [isLastMessageVisible, setIsLastMessageVisible] = useState(false);
+  const [isAudioEnded, setIsAudioEnded] = useState(false);
 
   const handleInteraction = () => {
+    if (!isAudioEnded) return;
+
     onNext();
     setIsToastVisible(false);
     setIsBottomButtonVisible(false);
-    clearTimeout(timeoutIdRef.current);
+    setIsLastMessageVisible(false);
+  };
+
+  const handleAudioEnd = () => {
+    setIsAudioEnded(true);
+    setIsToastVisible(true);
+    setIsBottomButtonVisible(true);
+    setIsLastMessageVisible(true);
   };
 
   useEffect(() => {
-    const audio = new Audio();
-    audio.loop = true;
+    const audio = new Audio(content.audio);
+    audio.loop = false;
     audio.play();
-
-    timeoutIdRef.current = setTimeout(() => {
-      setIsToastVisible(true);
-    }, 3000);
-
-    timeoutIdRef.current = setTimeout(() => {
-      setIsBottomButtonVisible(true);
-    }, audio.duration + 3000);
+    audio.onended = handleAudioEnd;
+    setIsAudioEnded(false);
 
     return () => {
       audio.pause();
-      audio.currentTime = 0;
-      clearTimeout(timeoutIdRef.current);
     };
-  });
+  }, [content.audio]);
 
   return (
     <>
@@ -89,7 +90,7 @@ function LectureContentContainer({ content, isLastPage, onNext }: LectureContent
         ) : (
           <AnimationView params={{ src: content.image, autoplay: true }} size={{ width: 886, height: 626 }} />
         )}
-        {!content.lastMessage && <Toast message='화면을 터치하면 다음 페이지로 넘어가요' isVisible={isToastVisible} />}
+        {!content.lastMessage && <Toast message='화면을 터치하면 다음 페이지로 넘어가요' isVisible={isToastVisible} onClick={handleInteraction} />}
         {content.lastMessage && (
           <Button.Xlarge className='bottom_button' onClick={onNext}>
             {isLastPage ? '완료' : '다음'}
@@ -97,7 +98,12 @@ function LectureContentContainer({ content, isLastPage, onNext }: LectureContent
         )}
       </StyledLectureContentContainer>
       {content.lastMessage && (
-        <MessageAlert title={content.lastMessage.title} content={content.lastMessage.content} icon={content.lastMessage.icon} isVisible={true} />
+        <MessageAlert
+          title={content.lastMessage.title}
+          content={content.lastMessage.content}
+          icon={content.lastMessage.icon}
+          isVisible={isLastMessageVisible}
+        />
       )}
     </>
   );

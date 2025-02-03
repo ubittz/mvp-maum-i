@@ -11,12 +11,21 @@ import lastContent1 from '@@assets/animations/newContent1.riv';
 import lastContent2 from '@@assets/animations/newContent2.riv';
 import lastContent3 from '@@assets/animations/newContent3.riv';
 import lastContent4 from '@@assets/animations/newContent4.riv';
-// import secondContent1 from '@@assets/animations/secondContent1.riv';
-// import secondContent2 from '@@assets/animations/secondContent2.riv';
-// import secondContent3 from '@@assets/animations/secondContent3.riv';
-// import secondContent4 from '@@assets/animations/secondContent4.riv';
-// import secondContent5 from '@@assets/animations/secondContent  5.riv';
-// import secondContent6 from '@@assets/animations/secondContent6.riv';
+import animationContentAudio1 from '@@assets/audios/animationContent1_audio.mp4';
+import animationContentMessageAudio1 from '@@assets/audios/animationContent1_messageAudio.mp4';
+import contentAudio1 from '@@assets/audios/content1_audio.mp4';
+import contentAudio2 from '@@assets/audios/content2_audio.mp4';
+import contentAudio3 from '@@assets/audios/content3_audio.mp4';
+import contentAudio4 from '@@assets/audios/content4_audio.mp4';
+import contentAudio5 from '@@assets/audios/content5_audio.mp4';
+import contentAudio6 from '@@assets/audios/content6_audio.mp4';
+import introAudio1 from '@@assets/audios/intro1_audio.mp4';
+import introAudio2 from '@@assets/audios/intro2_audio.mp4';
+import lastContentAudio1 from '@@assets/audios/lastContent1_audio.mp4';
+import lastContentAudio2 from '@@assets/audios/lastContent2_audio.mp4';
+import lastContentAudio3 from '@@assets/audios/lastContent3_audio.mp4';
+import lastContentAudio4 from '@@assets/audios/lastContent4_audio.mp4';
+import lastContentMessageAudio from '@@assets/audios/lastContent_messageAudio.mp4';
 import { checkIcon, magnifyIcon, questionMarkIcon } from '@@assets/icons';
 
 import { Lecture, Step, Review } from './types';
@@ -72,9 +81,11 @@ const dummyReviews: Review[] = [
 const dummyIntros = [
   {
     image: intro1,
+    audio: introAudio1,
   },
   {
     image: intro2,
+    audio: introAudio2,
   },
 ];
 
@@ -83,49 +94,53 @@ const dummyContents = [
     image: content1,
     isNormalImage: true,
     isTouchable: false,
+    audio: contentAudio1,
   },
   {
     image: content2,
     isNormalImage: true,
     isTouchable: false,
+    audio: contentAudio2,
   },
   {
     image: content3,
     isNormalImage: true,
     isTouchable: false,
+    audio: contentAudio3,
   },
   {
     image: content4,
     isNormalImage: true,
     isTouchable: false,
+    audio: contentAudio4,
   },
   {
     image: content5,
     isNormalImage: true,
     isTouchable: false,
+    audio: contentAudio5,
   },
   {
     image: content6,
     isNormalImage: true,
     isTouchable: false,
-  },
-  {
-    image: content6,
-    isNormalImage: true,
-    isTouchable: false,
+    audio: contentAudio6,
     lastMessage: {
       title: '한 줄 문구',
       content: '우리도 마음속 다양한 감정을 만나러 출발해 볼까요?',
       icon: checkIcon,
     },
   },
+
   {
     image: animationContent1,
+    audio: animationContentAudio1,
     isTouchable: false,
   },
   {
     image: animationContent1,
     isTouchable: false,
+    audio: animationContentMessageAudio1,
     lastMessage: {
       title: '알아보기',
       icon: magnifyIcon,
@@ -133,25 +148,31 @@ const dummyContents = [
         먼저 공감이는 무엇이 궁금한지 알아보기로 해요.`,
     },
   },
+
   {
     image: lastContent1,
-    isTouchable: false,
+    isTouchable: true,
+    audio: lastContentAudio1,
   },
   {
     image: lastContent2,
-    isTouchable: false,
+    isTouchable: true,
+    audio: lastContentAudio2,
   },
   {
     image: lastContent3,
-    isTouchable: false,
+    isTouchable: true,
+    audio: lastContentAudio3,
+  },
+  {
+    image: lastContent4,
+    isTouchable: true,
+    audio: lastContentAudio4,
   },
   {
     image: lastContent4,
     isTouchable: false,
-  },
-  {
-    image: lastContent4,
-    isTouchable: false,
+    audio: lastContentMessageAudio,
     lastMessage: {
       title: '생각해보기',
       content: '나는 요즘에 무엇이 궁금해요? ',

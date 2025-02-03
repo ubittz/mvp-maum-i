@@ -17,11 +17,12 @@ const ToastContainer = styled.div<{ isVisible: boolean }>`
   z-index: 1000;
   transition: opacity 0.5s ease-in-out;
   opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
+  cursor: pointer;
 `;
 
-function Toast({ message, isVisible }: ToastProps) {
+function Toast({ message, isVisible, onClick }: ToastProps) {
   return (
-    <ToastContainer isVisible={isVisible}>
+    <ToastContainer isVisible={isVisible} onClick={onClick}>
       <Typography.Subtitle3>{message}</Typography.Subtitle3>
     </ToastContainer>
   );
