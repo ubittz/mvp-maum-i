@@ -46,14 +46,14 @@ function Footer() {
       </Flex.Horizontal>
       <Flex.Horizontal className='right_container'>
         <Typography.Caption2>
-          사업자정보 (주)마음아이
+          사업자정보 (주)컬러풀인터렉션
           <br />
-          대표자명 남재현
+          대표자명 최석범
         </Typography.Caption2>
         <Typography.Caption2>
-          사업자등록번호 753-86-01432
+          사업자등록번호 389-81-03613
           <br />
-          주소 서울특별시 금천구 벚꽃로 286, 507-259호(가산동, 삼성리더스타워)
+          주소 서울특별시 서초구 서초대로73길 40
         </Typography.Caption2>
         <Typography.Caption2>
           (주)마음아이 고객센터
