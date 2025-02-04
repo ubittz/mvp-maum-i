@@ -1,10 +1,10 @@
 Keep this file and signing.keystore in a safe place. You'll need these files if you want to upload future versions of your PWA to the Google Play Store.
 
 Key store file: signing.keystore
-Key store password: is4o5uPOIMh4
+Key store password: V5SUFYD_6tfx
 Key alias: my-key-alias
-Key password: is4o5uPOIMh4
+Key password: V5SUFYD_6tfx
 Signer's full name: 마음아이 Admin
 Signer's organization: 마음아이
 Signer's organizational unit: Engineering
-Signer's country code: KR
+Signer's country code: US
