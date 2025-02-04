@@ -57,7 +57,7 @@ const StyledStudyStatusContainer = styled(Flex.Vertical)`
 function StudyStatusContainer() {
   const navigate = useNavigate();
 
-  const userName: string = '최민정';
+  const userName: string = '최석범';
   const studyDay: number = 3;
   const studyTotal: number = 36;
   const studyProgress: number = 2;
