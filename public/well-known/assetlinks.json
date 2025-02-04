@@ -4,7 +4,7 @@
     "target": {
       "namespace": "android_app",
       "package_name": "app.netlify.thegonggam.twa",
-      "sha256_cert_fingerprints": ["4C:F9:EF:A9:BC:DA:F3:B1:61:6A:6B:A1:3B:D3:F7:BB:75:F3:10:AA:5E:AE:26:18:D7:7B:C8:8E:F6:DD:A9:EB"]
+      "sha256_cert_fingerprints": ["33:F4:5B:0E:DA:EC:ED:D7:79:AC:3A:C0:03:81:70:46:5D:97:B8:E2:D3:CA:48:B8:58:5B:78:8E:9D:1B:97:5E"]
     }
   }
 ]
