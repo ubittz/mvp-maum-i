@@ -14,6 +14,10 @@ const StyledStepDetailGridItem = styled(Flex.Vertical)`
     width: 100%;
     border-radius: 0 0 13px 13px;
   }
+
+  .thumbnail {
+    border-radius: 13px 13px 0 0;
+  }
 `;
 
 interface StepDetailGridItemProps {
@@ -24,7 +28,7 @@ interface StepDetailGridItemProps {
 function StepDetailGridItem({ lecture, onClick }: StepDetailGridItemProps) {
   return (
     <StyledStepDetailGridItem onClick={onClick}>
-      {lecture.thumbnail ? <img src={lecture.thumbnail} alt={lecture.title} /> : <LectureThumbnail />}
+      {lecture.thumbnail ? <img src={lecture.thumbnail} alt={lecture.title} className='thumbnail' /> : <LectureThumbnail className='thumbnail' />}
       <Button.Xlarge className='button'>{lecture.title}</Button.Xlarge>
     </StyledStepDetailGridItem>
   );

@@ -17,7 +17,7 @@ const StyledLectureDetail = styled(Flex.Vertical)`
   .img {
     width: 100%;
     height: 332px;
-    object-fit: cover;
+    object-fit: fill;
     background-color: ${COLORS.GRAY_SCALE_100};
   }
 

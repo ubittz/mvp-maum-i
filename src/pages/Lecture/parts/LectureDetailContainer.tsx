@@ -14,7 +14,6 @@ const StyledLectureDetailContainer = styled.div<{ padding?: string }>`
   background-color: ${COLORS.MAIN_100};
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
 `;
 
 const StickyHeader = styled.div`

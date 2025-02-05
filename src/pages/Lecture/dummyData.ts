@@ -26,6 +26,18 @@ import lastContentAudio3 from '@@assets/audios/lastContent3_audio.mp4';
 import lastContentAudio4 from '@@assets/audios/lastContent4_audio.mp4';
 import lastContentMessageAudio from '@@assets/audios/lastContent_messageAudio.mp4';
 import { checkIcon, magnifyIcon, questionMarkIcon } from '@@assets/icons';
+import thumbnail1 from '@@assets/images/1-1.png';
+import thumbnail10 from '@@assets/images/1-10.png';
+import thumbnail11 from '@@assets/images/1-11.png';
+import thumbnail12 from '@@assets/images/1-12.png';
+import thumbnail2 from '@@assets/images/1-2.png';
+import thumbnail3 from '@@assets/images/1-3.png';
+import thumbnail4 from '@@assets/images/1-4.png';
+import thumbnail5 from '@@assets/images/1-5.png';
+import thumbnail6 from '@@assets/images/1-6.png';
+import thumbnail7 from '@@assets/images/1-7.png';
+import thumbnail8 from '@@assets/images/1-8.png';
+import thumbnail9 from '@@assets/images/1-9.png';
 
 import { Lecture, Step, Review } from './types';
 
@@ -180,6 +192,7 @@ export const dummyLectures: Lecture[] = [
     id: 1,
     stepTitle: 'Step 1',
     title: '1. 다양한 감정',
+    thumbnail: thumbnail1,
     summary: `첫 번째, 감정의 이야기 '다양한 감정'`,
     description: 'Description for Lecture 1-1',
     intro: dummyIntros,
@@ -220,6 +233,7 @@ export const dummyLectures: Lecture[] = [
     id: 2,
     stepTitle: 'Step 1',
     title: '2. 심리적 경계',
+    thumbnail: thumbnail2,
     summary: `두 번째, 감정의 이야기 '심리적 경계'`,
     description: 'Description for Lecture 1-2',
     intro: dummyIntros,
@@ -260,6 +274,7 @@ export const dummyLectures: Lecture[] = [
     id: 3,
     stepTitle: 'Step 1',
     title: '3. 감정 인식',
+    thumbnail: thumbnail3,
     summary: `세 번째, 감정의 이야기 '감정 인식'`,
     description: 'Description for Lecture 1-3',
     intro: dummyIntros,
@@ -300,6 +315,7 @@ export const dummyLectures: Lecture[] = [
     id: 4,
     stepTitle: 'Step 1',
     title: '4. 감정 표현',
+    thumbnail: thumbnail4,
     summary: `네 번째, 감정의 이야기 '감정 표현'`,
     description: 'Description for Lecture 1-4',
     intro: dummyIntros,
@@ -340,6 +356,7 @@ export const dummyLectures: Lecture[] = [
     id: 5,
     stepTitle: 'Step 1',
     title: '5. 감정 이해',
+    thumbnail: thumbnail5,
     summary: `다섯 번째, 감정의 이야기 '감정 이해'`,
     description: 'Description for Lecture 1-5',
     intro: dummyIntros,
@@ -380,6 +397,253 @@ export const dummyLectures: Lecture[] = [
     id: 6,
     stepTitle: 'Step 1',
     title: '6. 감정 관리',
+    thumbnail: thumbnail6,
+    summary: `여섯 번째, 감정의 이야기 '감정 관리'`,
+    description: 'Description for Lecture 1-6',
+    intro: dummyIntros,
+    content: dummyContents,
+    statistics: {
+      interaction: 0,
+      childStatistics: {
+        participation: 55,
+        expression: 45,
+        emotionRecognition: 35,
+        empathy: 60,
+      },
+      parentStatistics: {
+        participation: 50,
+        expression: 40,
+        emotionRecognition: 30,
+        empathy: 55,
+      },
+    },
+    averageStatistics: {
+      interaction: 5,
+      childStatistics: {
+        participation: 80,
+        expression: 70,
+        emotionRecognition: 60,
+        empathy: 90,
+      },
+      parentStatistics: {
+        participation: 75,
+        expression: 65,
+        emotionRecognition: 55,
+        empathy: 85,
+      },
+    },
+    reviews: dummyReviews,
+  },
+  {
+    id: 7,
+    stepTitle: 'Step 1',
+    title: '7. 감정 관리',
+    thumbnail: thumbnail7,
+    summary: `여섯 번째, 감정의 이야기 '감정 관리'`,
+    description: 'Description for Lecture 1-6',
+    intro: dummyIntros,
+    content: dummyContents,
+    statistics: {
+      interaction: 0,
+      childStatistics: {
+        participation: 55,
+        expression: 45,
+        emotionRecognition: 35,
+        empathy: 60,
+      },
+      parentStatistics: {
+        participation: 50,
+        expression: 40,
+        emotionRecognition: 30,
+        empathy: 55,
+      },
+    },
+    averageStatistics: {
+      interaction: 5,
+      childStatistics: {
+        participation: 80,
+        expression: 70,
+        emotionRecognition: 60,
+        empathy: 90,
+      },
+      parentStatistics: {
+        participation: 75,
+        expression: 65,
+        emotionRecognition: 55,
+        empathy: 85,
+      },
+    },
+    reviews: dummyReviews,
+  },
+  {
+    id: 8,
+    stepTitle: 'Step 1',
+    title: '8. 감정 관리',
+    thumbnail: thumbnail8,
+    summary: `여섯 번째, 감정의 이야기 '감정 관리'`,
+    description: 'Description for Lecture 1-6',
+    intro: dummyIntros,
+    content: dummyContents,
+    statistics: {
+      interaction: 0,
+      childStatistics: {
+        participation: 55,
+        expression: 45,
+        emotionRecognition: 35,
+        empathy: 60,
+      },
+      parentStatistics: {
+        participation: 50,
+        expression: 40,
+        emotionRecognition: 30,
+        empathy: 55,
+      },
+    },
+    averageStatistics: {
+      interaction: 5,
+      childStatistics: {
+        participation: 80,
+        expression: 70,
+        emotionRecognition: 60,
+        empathy: 90,
+      },
+      parentStatistics: {
+        participation: 75,
+        expression: 65,
+        emotionRecognition: 55,
+        empathy: 85,
+      },
+    },
+    reviews: dummyReviews,
+  },
+  {
+    id: 9,
+    stepTitle: 'Step 1',
+    title: '9. 감정 관리',
+    thumbnail: thumbnail9,
+    summary: `여섯 번째, 감정의 이야기 '감정 관리'`,
+    description: 'Description for Lecture 1-6',
+    intro: dummyIntros,
+    content: dummyContents,
+    statistics: {
+      interaction: 0,
+      childStatistics: {
+        participation: 55,
+        expression: 45,
+        emotionRecognition: 35,
+        empathy: 60,
+      },
+      parentStatistics: {
+        participation: 50,
+        expression: 40,
+        emotionRecognition: 30,
+        empathy: 55,
+      },
+    },
+    averageStatistics: {
+      interaction: 5,
+      childStatistics: {
+        participation: 80,
+        expression: 70,
+        emotionRecognition: 60,
+        empathy: 90,
+      },
+      parentStatistics: {
+        participation: 75,
+        expression: 65,
+        emotionRecognition: 55,
+        empathy: 85,
+      },
+    },
+    reviews: dummyReviews,
+  },
+  {
+    id: 10,
+    stepTitle: 'Step 1',
+    title: '10. 감정 관리',
+    thumbnail: thumbnail10,
+    summary: `여섯 번째, 감정의 이야기 '감정 관리'`,
+    description: 'Description for Lecture 1-6',
+    intro: dummyIntros,
+    content: dummyContents,
+    statistics: {
+      interaction: 0,
+      childStatistics: {
+        participation: 55,
+        expression: 45,
+        emotionRecognition: 35,
+        empathy: 60,
+      },
+      parentStatistics: {
+        participation: 50,
+        expression: 40,
+        emotionRecognition: 30,
+        empathy: 55,
+      },
+    },
+    averageStatistics: {
+      interaction: 5,
+      childStatistics: {
+        participation: 80,
+        expression: 70,
+        emotionRecognition: 60,
+        empathy: 90,
+      },
+      parentStatistics: {
+        participation: 75,
+        expression: 65,
+        emotionRecognition: 55,
+        empathy: 85,
+      },
+    },
+    reviews: dummyReviews,
+  },
+  {
+    id: 11,
+    stepTitle: 'Step 1',
+    title: '11. 감정 관리',
+    thumbnail: thumbnail11,
+    summary: `여섯 번째, 감정의 이야기 '감정 관리'`,
+    description: 'Description for Lecture 1-6',
+    intro: dummyIntros,
+    content: dummyContents,
+    statistics: {
+      interaction: 0,
+      childStatistics: {
+        participation: 55,
+        expression: 45,
+        emotionRecognition: 35,
+        empathy: 60,
+      },
+      parentStatistics: {
+        participation: 50,
+        expression: 40,
+        emotionRecognition: 30,
+        empathy: 55,
+      },
+    },
+    averageStatistics: {
+      interaction: 5,
+      childStatistics: {
+        participation: 80,
+        expression: 70,
+        emotionRecognition: 60,
+        empathy: 90,
+      },
+      parentStatistics: {
+        participation: 75,
+        expression: 65,
+        emotionRecognition: 55,
+        empathy: 85,
+      },
+    },
+    reviews: dummyReviews,
+  },
+  {
+    id: 12,
+    stepTitle: 'Step 1',
+    title: '12. 감정 관리',
+    thumbnail: thumbnail12,
     summary: `여섯 번째, 감정의 이야기 '감정 관리'`,
     description: 'Description for Lecture 1-6',
     intro: dummyIntros,
